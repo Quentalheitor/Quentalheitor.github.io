@@ -2,9 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Heitor Quental</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heitor Quental — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    :root {
+      --main: #334155; /*[cite: 1] */
+      --text: #111827; /*[cite: 1] */
+      --bg: #FAFAFA; /*[cite: 1] */
+      --accent: #D97706; /*[cite: 1] */
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg); /*[cite: 1] */
+      color: var(--text); /*[cite: 1] */
+      font-family: 'Inter', sans-serif; /*[cite: 1] */
+      padding: 48px 24px;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      font-family: 'Space Grotesk', sans-serif; /*[cite: 1] */
+      color: var(--main); /*[cite: 1] */
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-weight: 700; /*[cite: 1] */
+      font-size: 40px;
+      color: var(--text); /*[cite: 1] */
+      margin-bottom: 8px;
+    }
+    .claim {
+      font-size: 20px;
+      font-weight: 500; /*[cite: 1] */
+      color: var(--main); /*[cite: 1] */
+      margin-bottom: 12px;
+    }
+    .credentials {
+      font-size: 14px;
+      color: var(--main); /*[cite: 1] */
+      padding-bottom: 24px;
+      border-bottom: 1px solid #E2E4E7;
+      margin-bottom: 40px;
+    }
+    section {
+      margin-bottom: 48px;
+    }
+    ul {
+      list-style-type: none;
+    }
+    li {
+      margin-bottom: 12px;
+      padding-left: 16px;
+      border-left: 2px solid var(--main); /*[cite: 1] */
+    }
+    a {
+      color: var(--accent); /*[cite: 1] */
+      text-decoration: none;
+      font-weight: 500; /*[cite: 1] */
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .links-grid {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .placeholder-box {
+      border: 1px dashed #E2E4E7;
+      padding: 24px;
+      border-radius: 6px;
+      background: #fff;
+      color: var(--main); /*[cite: 1] */
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Heitor Quental</h1>
+
+  <header>
+    <h1>Heitor Quental</h1>
+    <div class="claim">"I build AI systems that run local, run secure, and run on real numbers."</div> <!--[cite: 2] -->
+    <div class="credentials">
+      Azure AI-900 | ISC2 Candidate | Cambridge C1 <!--[cite: 2] -->
+    </div>
+  </header>
+
+  <section>
+    <h2>Positioning</h2>
+    <p>I am an Information Systems student at Universidade Federal Rural de Pernambuco (UFRPE), engineering AI pipelines, full-stack platforms, and Linux automation. My professional focus is on the convergence of artificial intelligence and cybersecurity, building systems that are secure, local-first, and backed by measurable benchmarks.</p>
+  </section>
+
+  <section>
+    <h2>What I'm Building</h2>
+    <ul>
+      <li><strong><a href="https://github.com/Quentalheitor/Whisper_Transcriber" target="_blank">Whisper_Transcriber</a>:</strong> A standalone local-only Python transcription pipeline utilizing the Whisper small model with measured RTF and VRAM optimization.</li>
+      <li><strong><a href="https://github.com/Quentalheitor/Buffet_Brain" target="_blank">Buffet_Brain</a>:</strong> A 3-engine classification system evaluated for baseline accuracy.</li>
+      <li><strong><a href="https://github.com/Quentalheitor/jarvis-project" target="_blank">Jarvis-project</a>:</strong> An automated script framework running Python executables with sub-350ms dispatch and external API integrations.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Connect & Review</h2>
+    <div class="links-grid">
+      <!-- Replace the # below with your actual URLs -->
+      <a href="https://www.linkedin.com/in/heitor-quental-887864382/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/Quentalheitor" target="_blank" rel="noopener noreferrer">GitHub Profile</a> <!--[cite: 2] -->
+      <a href="resume.pdf" target="_blank">Download CV</a> <!--[cite: 2] -->
+      <a href="mailto:heitorquental321@gmail.com">Contact Directly</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Notes & Updates</h2>
+    <div class="placeholder-box">
+      <strong>Future Space:</strong> This section is reserved for upcoming technical posts, my FlyRank internship capstone project, and the official completion badge.
+    </div>
+  </section>
+
 </body>
 </html>
