@@ -7,7 +7,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <!-- Updated to the new compressed, spherical favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
   <style>
     :root {
@@ -76,11 +75,10 @@
       margin-bottom: 32px;
     }
     
-    /* Accessibility fix: Expanded tap targets for mobile */
     .links-grid a {
       display: inline-block;
       padding: 10px 16px;
-      background-color: #F1F5F9; /* Subtle slate background */
+      background-color: #F1F5F9; 
       border-radius: 6px;
       color: var(--main);
       border: 1px solid #E2E4E7;
@@ -137,20 +135,19 @@
       font-size: 14px;
     }
 
-    /* Mobile Optimization Fixes */
     @media (max-width: 600px) {
       body {
-        padding: 32px 16px; /* Prevents edge-spilling on small phones */
+        padding: 32px 16px;
       }
       h1 {
-        font-size: 32px; /* Fixes aggressive word wrapping */
+        font-size: 32px; 
       }
       .links-grid {
         flex-direction: column;
         gap: 12px;
       }
       .links-grid a {
-        text-align: center; /* Makes tap targets span nicely on mobile */
+        text-align: center;
       }
     }
   </style>
@@ -173,7 +170,6 @@
   <section>
     <h2>What I'm Building</h2>
     <ul>
-      <!-- Security fix: Added rel="noopener noreferrer" to all external tabs -->
       <li><strong><a href="https://github.com/Quentalheitor/Whisper_Transcriber" target="_blank" rel="noopener noreferrer">Whisper_Transcriber</a>:</strong> A standalone local-only Python transcription pipeline utilizing the Whisper small model with measured RTF and VRAM optimization.</li>
       <li><strong><a href="https://github.com/Quentalheitor/Buffet_Brain" target="_blank" rel="noopener noreferrer">Buffet_Brain</a>:</strong> A 3-engine classification system evaluated for baseline accuracy.</li>
       <li><strong><a href="https://github.com/Quentalheitor/jarvis-project" target="_blank" rel="noopener noreferrer">Jarvis-project</a>:</strong> An automated script framework running Python executables with sub-350ms dispatch and external API integrations.</li>
@@ -188,7 +184,6 @@
       <a href="heitor_quental_cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
     </div>
 
-    <!-- The Dynamic Contact Form -->
     <form action="https://formspree.io/f/xkjwdpqr" method="POST" class="contact-form">
       <div>
         <label for="name">Name</label>
