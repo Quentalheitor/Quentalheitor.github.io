@@ -4,10 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Heitor Quental — Portfolio</title>
+  
+  <meta name="description" content="Portfolio of Heitor Quental, Information Systems student building secure, local-first AI pipelines and multi-engine architectures with graceful degradation.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://quentalheitor.github.io/">
+  <meta property="og:title" content="Heitor Quental — AI & Systems Engineering Portfolio">
+  <meta property="og:description" content="Portfolio of Heitor Quental, Information Systems student building secure, local-first AI pipelines and multi-engine architectures with graceful degradation.">
+  <meta property="og:image" content="https://quentalheitor.github.io/preview-image.jpg"> 
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://quentalheitor.github.io/">
+  <meta name="twitter:title" content="Heitor Quental — AI & Systems Engineering Portfolio">
+  <meta name="twitter:description" content="Portfolio of Heitor Quental, Information Systems student building secure, local-first AI pipelines and multi-engine architectures with graceful degradation.">
+  <meta name="twitter:image" content="https://quentalheitor.github.io/preview-image.jpg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="favicon.png">
+  
   <style>
     :root {
       --main: #334155;
@@ -88,7 +104,6 @@
       border-color: var(--main);
     }
     
-    /* Form Styles */
     .contact-form {
       display: flex;
       flex-direction: column;
@@ -99,6 +114,8 @@
       font-weight: 500;
       color: var(--main);
       font-size: 14px;
+      display: flex;
+      justify-content: space-between;
     }
     .contact-form input, .contact-form textarea {
       font-family: 'Inter', sans-serif;
@@ -119,20 +136,21 @@
       border-radius: 6px;
       cursor: pointer;
       align-self: flex-start;
-      transition: opacity 0.2s ease;
+      transition: all 0.2s ease;
       font-size: 16px;
     }
-    .contact-form button:hover {
+    .contact-form button:hover:not(:disabled) {
       opacity: 0.9;
     }
+    .contact-form button:disabled {
+      background-color: #94A3B8;
+      cursor: not-allowed;
+    }
 
-    .placeholder-box {
-      border: 1px dashed #E2E4E7;
-      padding: 24px;
-      border-radius: 6px;
-      background: #fff;
-      color: var(--main);
-      font-size: 14px;
+    #charCount {
+      font-size: 12px;
+      color: #64748B;
+      font-weight: 400;
     }
 
     @media (max-width: 600px) {
@@ -173,7 +191,7 @@
     <h2>What I'm Building</h2>
     <ul>
       <li><strong><a href="https://github.com/Quentalheitor/Whisper_Transcriber" target="_blank" rel="noopener noreferrer">Whisper_Transcriber</a>:</strong> A standalone local-only Python transcription pipeline utilizing the Whisper small model with measured RTF and VRAM optimization.</li>
-      <li><strong><a href="https://github.com/Quentalheitor/Buffet_Brain" target="_blank" rel="noopener noreferrer">Buffet_Brain</a>:</strong> Buffet_Brain:  A financial classification pipeline utilizing a 3-engine architecture to predict user investment styles from historical financial behavior and demographic data. It features hardcoded fail-safes designed for graceful degradation; if the primary AI classification agents become unresponsive, the system automatically defaults to recommending mathematically safe, historically proven index funds, providing the user with transparent reasoning for the fallback choice rather than failing silently.</li>
+      <li><strong><a href="https://github.com/Quentalheitor/Buffet_Brain" target="_blank" rel="noopener noreferrer">Buffet_Brain</a>:</strong> A financial classification pipeline utilizing a 3-engine architecture to predict user investment styles from historical financial behavior and demographic data. It features hardcoded fail-safes designed for graceful degradation; if the primary AI classification agents become unresponsive, the system automatically defaults to recommending mathematically safe, historically proven index funds, providing the user with transparent reasoning for the fallback choice rather than failing silently.</li>
       <li><strong><a href="https://github.com/Quentalheitor/jarvis-project" target="_blank" rel="noopener noreferrer">Jarvis-project</a>:</strong> An automated script framework running Python executables with sub-350ms dispatch and external API integrations.</li>
     </ul>
   </section>
@@ -186,25 +204,51 @@
       <a href="heitor_quental_cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
     </div>
 
-    <form action="https://formspree.io/f/xkjwdpqr" method="POST" class="contact-form">
+    <form action="https://formspree.io/f/xkjwdpqr" method="POST" class="contact-form" id="contactForm">
       <div>
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" required maxlength="100">
       </div>
       
       <div>
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required maxlength="100">
       </div>
       
       <div>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <label for="message">Message <span id="charCount">0/1000</span></label>
+        <textarea id="message" name="message" rows="5" required maxlength="1000"></textarea>
       </div>
       
-      <button type="submit">Send Message</button>
+      <button type="submit" id="submitBtn">Send Message</button>
     </form>
   </section>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const messageInput = document.getElementById('message');
+    const charCount = document.getElementById('charCount');
+    const MAX_LENGTH = 1000;
+
+    messageInput.addEventListener('input', function() {
+      if (this.value.length > MAX_LENGTH) {
+        this.value = this.value.substring(0, MAX_LENGTH);
+      }
+      charCount.textContent = `${this.value.length}/${MAX_LENGTH}`;
+    });
+
+    form.addEventListener('submit', function(event) {
+      if (submitBtn.disabled) {
+        event.preventDefault();
+        return;
+      }
+      
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      
+    });
+  </script>
 
 </body>
 </html>
