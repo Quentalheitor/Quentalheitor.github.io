@@ -1,0 +1,78 @@
+:root {
+  --slate-dark: #0f172a;
+  --slate-light: #1e293b;
+  --amber-accent: #f59e0b;
+  --text-main: #f8fafc;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, var(--slate-dark), var(--slate-light));
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Thin continuous white line aesthetic */
+.geometric-line {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 0;
+}
+
+.horizontal-line { width: 100vw; height: 1px; }
+.vertical-line { height: 100vh; width: 1px; }
+
+/* Contact Form Styling */
+.contact-input {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-input::placeholder {
+  color: #64748b;
+}
+
+.contact-input:focus {
+  outline: none;
+  border-color: var(--amber-accent);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+textarea.contact-input {
+  resize: vertical;
+  min-height: 150px;
+}
+/* Screen-reader only class for accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  whiteSpace: nowrap;
+  borderWidth: 0;
+}
+
+/* Lightbox image sizing */
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  border: 1px solid var(--amber-accent);
+}
