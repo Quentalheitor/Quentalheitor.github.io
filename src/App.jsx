@@ -241,7 +241,7 @@ const ProjectCard = ({ title, stack, description, imagePath, repoLink, setLightb
           whileTap={{ scale: 0.98 }}
           style={{ padding: '1rem', backgroundColor: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', cursor: 'zoom-in' }}
         >
-          <img src={imagePath} alt={title} style={{ width: '100%', height: 'auto', display: 'block' }} />
+          <img src={imagePath} alt={title} loading="lazy" style={{ width: '100%', height: 'auto', display: 'block' }} />
         </motion.div>
       </div>
     </motion.div>
@@ -455,7 +455,7 @@ const CertCard = ({ title, description, imagePath, onGroupClick, onImageClick })
             onClick={(e) => { e.stopPropagation(); if(onImageClick) onImageClick(imagePath); }}
             style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', padding: '0.5rem', cursor: 'zoom-in' }}
           >
-            <img src={imagePath} alt={title} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+            <img src={imagePath} alt={title} loading="lazy" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
           </div>
           <p style={{ color: '#cbd5e1', fontSize: '0.85rem', lineHeight: 1.5, margin: 0 }}>{description}</p>
         </motion.div>
