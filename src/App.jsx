@@ -90,7 +90,7 @@ const HeroSection = () => {
         style={{
           position: 'absolute',
           top: '-5%', left: '-5%', right: '-5%', bottom: '-5%',
-          backgroundImage: 'url(/images/hero-bg.png)',
+          backgroundImage: 'url(/images/hero-bg.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           x: bgX, y: bgY,
@@ -176,9 +176,9 @@ const AboutSection = ({ setLightboxImage }) => {
       <div style={{ display: 'flex', gap: '4rem', maxWidth: '1000px', alignItems: 'center', flexWrap: 'wrap' }}>
         <div style={{ flex: '1 1 300px' }}>
           <motion.img 
-            src="/images/profile.png" 
+            src="/images/profile.webp" 
             alt="Profile" 
-            onClick={() => setLightboxImage("/images/profile.png")}
+            onClick={() => setLightboxImage("/images/profile.webp")}
             initial={{ filter: 'grayscale(100%)' }}
             whileHover={{ filter: 'grayscale(0%)', scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
@@ -266,7 +266,7 @@ const ProjectsSection = ({ setLightboxImage }) => {
           title="Buffet Brain"
           stack="LSTM NEURAL NETWORKS | TIME-SERIES ANALYSIS"
           description="Investor-profile classifier output integrating risk classification and time-series charting to generate strategy and portfolio allocation reasoning."
-          imagePath="/images/buffet-brain.png"
+          imagePath="/images/buffet-brain.webp"
           repoLink="https://github.com/Quentalheitor/Buffet_Brain"
           setLightboxImage={setLightboxImage}
         />
@@ -274,7 +274,7 @@ const ProjectsSection = ({ setLightboxImage }) => {
           title="Jarvis"
           stack="PYTHON | EXTERNAL API INTEGRATION"
           description="Automated script framework executing external API integrations via voice command. Features full command-response cycles and terminal tracking."
-          imagePath="/images/jarvis.png"
+          imagePath="/images/jarvis.webp"
           repoLink="https://github.com/Quentalheitor/Jarvis-project"
           setLightboxImage={setLightboxImage}
         />
@@ -282,7 +282,7 @@ const ProjectsSection = ({ setLightboxImage }) => {
           title="Glysera"
           stack="RUBY ON RAILS | REACT | VITE"
           description="A full-stack healthcare management system engineered to track patient records, medical equipment logistics, and health unit operations via a secure API architecture."
-          imagePath="/images/Glysera.png"
+          imagePath="/images/Glysera.webp"
           repoLink="https://github.com/Quentalheitor/Glysera_backend"
           setLightboxImage={setLightboxImage}
         />
@@ -290,7 +290,7 @@ const ProjectsSection = ({ setLightboxImage }) => {
           title="Whisper Transcriber"
           stack="TORCH | PULSEAUDIO | WHISPER MODEL | CUDA"
           description="Standalone voice-transcription application executing ambient noise calibration and processing locally on CUDA hardware using the Whisper small model."
-          imagePath="/images/transcriptor.png"
+          imagePath="/images/transcriptor.webp"
           repoLink="https://github.com/Quentalheitor/Whisper_Transcriber"
           setLightboxImage={setLightboxImage}
         />
@@ -605,31 +605,31 @@ const CertificationsSection = ({ setLightboxImage }) => {
           <CertCard 
             title={`Anthropic Certificates (${anthropicCerts.length})`}
             description="A comprehensive collection of Anthropic certifications covering Claude ecosystems, prompt engineering, agent skills, and AI Fluency frameworks. Click to view all."
-            imagePath="/images/Anthropic_logo.png"
+            imagePath="/images/Anthropic_logo.webp"
             onGroupClick={() => setActiveModal('anthropic')}
           />
           <CertCard 
             title={`FlyRank Internship (${flyrankCerts.length})`}
             description="Certificates of completion for applied artificial intelligence and machine learning development during the FlyRank internship. Click to view all."
-            imagePath="/images/Flyrank_logo.png"
+            imagePath="/images/Flyrank_logo.webp"
             onGroupClick={() => setActiveModal('flyrank')}
           />
           <CertCard 
             title={`Senac Certifications (${senacCerts.length})`}
             description="Software development training spanning front-end, back-end, and logical programming architectures. Click to view all."
-            imagePath="/images/Senac_logo.png"
+            imagePath="/images/Senac_logo.webp"
             onGroupClick={() => setActiveModal('senac')}
           />
           <CertCard 
             title={`ISC2 Competencies (${isc2Certs.length})`}
             description="Cybersecurity operational proficiency spanning 5 security domains. Click to view all."
-            imagePath="/images/ISC2_logo.png"
+            imagePath="/images/ISC2_logo.webp"
             onGroupClick={() => setActiveModal('isc2')}
           />
           <CertCard 
             title={`Hackathons & Events (${eventCerts.length})`}
             description="Competitive deployments and practical problem-solving events. Click to view all."
-            imagePath="/images/events_logo.png"
+            imagePath="/images/events_logo.webp"
             onGroupClick={() => setActiveModal('events')}
           />
 
