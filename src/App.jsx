@@ -176,15 +176,25 @@ const AboutSection = ({ setLightboxImage }) => {
       <div style={{ display: 'flex', gap: '4rem', maxWidth: '1000px', alignItems: 'center', flexWrap: 'wrap' }}>
         <div style={{ flex: '1 1 300px' }}>
           <motion.img 
-            src="/images/profile.webp" 
-            alt="Profile" 
-            onClick={() => setLightboxImage("/images/profile.webp")}
-            initial={{ filter: 'grayscale(100%)' }}
-            whileHover={{ filter: 'grayscale(0%)', scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            transition={{ duration: 0.4 }}
-            style={{ width: '100%', maxWidth: '350px', borderBottom: '4px solid var(--amber-accent)', display: 'block', cursor: 'zoom-in' }}
-          />
+              src="/images/profile.png" 
+              alt="Profile" 
+              onClick={() => setLightboxImage("/images/profile.png")}
+            
+              whileHover={{ 
+                scale: 1.02,
+                boxShadow: '0 0 25px rgba(245, 158, 11, 0.25)' 
+              }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ duration: 0.4 }}
+              style={{ 
+                width: '100%', 
+                maxWidth: '350px', 
+                borderBottom: '4px solid var(--amber-accent)', 
+                borderRadius: '4px', 
+                display: 'block', 
+                cursor: 'zoom-in' 
+              }}
+            />
         </div>
         <div style={{ flex: '1.5 1 400px' }}>
           <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>System Protocol</h2>
