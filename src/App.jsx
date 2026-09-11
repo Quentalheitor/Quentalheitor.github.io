@@ -176,7 +176,14 @@ const translations = {
       ],
       eventList: [
         { title: "BBTS Hackathon", description: "Participation and project deployment in the Banco do Brasil Tecnologia e Serviços competitive hackathon.", imagePath: "/images/certs/BBTS_hackathon.png" },
-        { title: "Ideathon — Maratona de Ideias", description: "Certificate of participation and collaborative solution structuring in the Ideathon innovation marathon.", imagePath: "/images/Heitor Quental Feitosa Kehrle do Amaral-1.webp" }
+        { 
+          title: "Ideathon — Maratona de Ideias", 
+          description: "Certificate of participation and winner award voucher for collaborative innovation and solution structuring in the Ideathon marathon.", 
+          imagePath: [
+            "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral.webp",
+            "/images/certs/6992ed8b-82c1-4532-9509-1318af7905c8.webp"
+          ]
+        }
       ],
       otherList: [
         { title: "Microsoft Azure AI Fundamentals", description: "Foundational certification validating knowledge of machine learning and artificial intelligence concepts.", imagePath: "/images/certs/AI-900.png" },
@@ -373,7 +380,14 @@ const translations = {
       ],
       eventList: [
         { title: "Hackathon BBTS", description: "Participação e implementação de projeto no hackathon competitivo do Banco do Brasil Tecnologia e Serviços.", imagePath: "/images/certs/BBTS_hackathon.png" },
-        { title: "Ideathon — Maratona de Ideias", description: "Certificado de participação e estruturação de soluções colaborativas na maratona de inovação Ideathon.", imagePath: "/images/Heitor Quental Feitosa Kehrle do Amaral-1.webp" }
+        { 
+          title: "Ideathon — Maratona de Ideias", 
+          description: "Certificado de participação e voucher de premiação pela vitória e estruturação colaborativa de soluções na maratona de inovação Ideathon.", 
+          imagePath: [
+            "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral.webp",
+            "/images/certs/6992ed8b-82c1-4532-9509-1318af7905c8.webp"
+          ]
+        }
       ],
       otherList: [
         { title: "Microsoft Azure AI Fundamentals", description: "Certificação fundamental validando conhecimentos em conceitos de inteligência artificial e machine learning.", imagePath: "/images/certs/AI-900.png" },
