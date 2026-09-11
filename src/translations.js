@@ -125,8 +125,8 @@ export const translations = {
           title: "FlyRank Recommendation Letter",
           description: "Official executive letter of recommendation from FlyRank's CEO detailing applied artificial intelligence contributions, engineering performance, and work ethic.",
           imagePath: [
-            "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral_Recommendation_Letter.webp",
-            "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral_Recommendation_Letter_2.webp" // replace with your second file name
+            "/images/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-1.webp",
+            "/images/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-2.webp" // replace with your second file name
           ]
         },
         {
@@ -285,8 +285,8 @@ export const translations = {
           title: "Carta de Recomendação FlyRank",
           description: "Carta executiva de recomendação do CEO da FlyRank detalhando contribuições em inteligência artificial aplicada, desempenho de engenharia e ética de trabalho.",
           imagePath: [
-            "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral_Recommendation_Letter.webp",
-            "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral_Recommendation_Letter_2.webp" // replace with your second file name
+            "/images/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-1.webp",
+            "/images/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-2.webp" // replace with your second file name
           ]
         },
         {
