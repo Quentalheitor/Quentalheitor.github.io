@@ -147,7 +147,7 @@ const translations = {
         {
           title: "FlyRank Recommendation Letter",
           description: "Official executive letter of recommendation from FlyRank's CEO detailing applied artificial intelligence contributions, engineering performance, and work ethic.",
-          imagePath: "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral_Recommendation_Letter.webp"
+          imagePath: "/images/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-1.webp"
         },
         {
           title: "FlyRank AI Fluency",
@@ -359,15 +359,15 @@ const translations = {
         { title: "Senac Lógica de Programação", description: "Formação fundamental em lógica de programação e estruturação de algoritmos.", imagePath: "/images/certs/Logic_senac.png" }
       ],
       isc2List: [
-        { title: "ISC2 CC Domínio 1", description: "Princípios de Segurança: Fundamentos de segurança, gestão de riscos e controles de segurança.", imagePath: "/images/certs/isc2_domain_1_competency.webp" },
-        { title: "ISC2 CC Domínio 2", description: "Continuidade de Negócios (BC), Recuperação de Desastres (DR) e Conceitos de Resposta a Incidentes.", imagePath: "/images/certs/isc2_domain_2_competency.webp" },
-        { title: "ISC2 CC Domínio 3", description: "Conceitos de Controle de Acesso: Controles de acesso físico e lógico e gestão de identidade.", imagePath: "/images/certs/isc2_domain_3_competency.webp" },
-        { title: "ISC2 CC Domínio 4", description: "Segurança de Redes: Conceitos de redes de computadores e proteção de arquiteturas de rede.", imagePath: "/images/certs/isc2_domain_4_competency.webp" },
-        { title: "ISC2 CC Domínio 5", description: "Operações de Segurança: Segurança de dados, hardening de sistemas e políticas de segurança.", imagePath: "/images/certs/isc2_domain_5_competency.webp" }
+        { title: "ISC2 CC Domínio 1", description: "Princípios de Segurança: Fundamentos de segurança, gestão de riscos e controles de segurança.", imagePath: "/images/isc2_domain_1_competency.webp" },
+        { title: "ISC2 CC Domínio 2", description: "Continuidade de Negócios (BC), Recuperação de Desastres (DR) e Conceitos de Resposta a Incidentes.", imagePath: "/images/isc2_domain_2_competency.webp" },
+        { title: "ISC2 CC Domínio 3", description: "Conceitos de Controle de Acesso: Controles de acesso físico e lógico e gestão de identidade.", imagePath: "/images/isc2_domain_3_competency.webp" },
+        { title: "ISC2 CC Domínio 4", description: "Segurança de Redes: Conceitos de redes de computadores e proteção de arquiteturas de rede.", imagePath: "/images/isc2_domain_4_competency.webp" },
+        { title: "ISC2 CC Domínio 5", description: "Operações de Segurança: Segurança de dados, hardening de sistemas e políticas de segurança.", imagePath: "/images/isc2_domain_5_competency.webp" }
       ],
       eventList: [
         { title: "Hackathon BBTS", description: "Participação e implementação de projeto no hackathon competitivo do Banco do Brasil Tecnologia e Serviços.", imagePath: "/images/certs/BBTS_hackathon.png" },
-        { title: "Ideathon — Maratona de Ideias", description: "Certificado de participação e estruturação de soluções colaborativas na maratona de inovação Ideathon.", imagePath: "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral.webp" }
+        { title: "Ideathon — Maratona de Ideias", description: "Certificado de participação e estruturação de soluções colaborativas na maratona de inovação Ideathon.", imagePath: "/images/certs/Heitor Quental Feitosa Kehrle do Amaral-1.webp" }
       ],
       otherList: [
         { title: "Microsoft Azure AI Fundamentals", description: "Certificação fundamental validando conhecimentos em conceitos de inteligência artificial e machine learning.", imagePath: "/images/certs/AI-900.png" },
@@ -907,6 +907,7 @@ const CertCard = ({ title, description, imagePath, onGroupClick, onImageClick })
   const [forceClose, setForceClose] = useState(false);
 
   const isActive = isHovered && !forceClose;
+  const isMultiImage = Array.isArray(imagePath);
 
   const handleBottomClick = (e) => {
     e.stopPropagation();
@@ -961,34 +962,80 @@ const CertCard = ({ title, description, imagePath, onGroupClick, onImageClick })
             pointerEvents: isActive ? 'auto' : 'none'
           }}
         >
+          {/* Image Container: handles either 1 or multiple images */}
           <div 
-            onClick={(e) => { e.stopPropagation(); if(onImageClick) onImageClick(imagePath); }}
             style={{ 
               width: '100%',
-              backgroundColor: 'rgba(0,0,0,0.35)', 
-              borderRadius: '4px', 
-              border: '1px solid rgba(255,255,255,0.06)',
               display: 'flex', 
+              gap: '0.5rem',
               alignItems: 'center', 
-              justifyContent: 'center', 
-              overflow: 'hidden', 
-              padding: '0.85rem', 
-              cursor: 'zoom-in' 
+              justifyContent: 'center'
             }}
           >
-            <img 
-              src={imagePath} 
-              alt={title} 
-              loading="lazy" 
-              style={{ 
-                maxWidth: '100%', 
-                height: 'auto', 
-                maxHeight: '440px', 
-                objectFit: 'contain', 
-                display: 'block',
-                borderRadius: '2px'
-              }} 
-            />
+            {isMultiImage ? (
+              imagePath.map((src, idx) => (
+                <div
+                  key={idx}
+                  onClick={(e) => { e.stopPropagation(); if(onImageClick) onImageClick(src); }}
+                  style={{
+                    flex: 1,
+                    backgroundColor: 'rgba(0,0,0,0.35)',
+                    borderRadius: '4px',
+                    border: '1px solid rgba(255,255,255,0.06)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    overflow: 'hidden',
+                    padding: '0.5rem',
+                    cursor: 'zoom-in'
+                  }}
+                >
+                  <img 
+                    src={src} 
+                    alt={`${title} - page ${idx + 1}`} 
+                    loading="lazy" 
+                    style={{ 
+                      maxWidth: '100%', 
+                      height: 'auto', 
+                      maxHeight: '440px', 
+                      objectFit: 'contain', 
+                      display: 'block',
+                      borderRadius: '2px'
+                    }} 
+                  />
+                </div>
+              ))
+            ) : (
+              <div 
+                onClick={(e) => { e.stopPropagation(); if(onImageClick) onImageClick(imagePath); }}
+                style={{ 
+                  width: '100%',
+                  backgroundColor: 'rgba(0,0,0,0.35)', 
+                  borderRadius: '4px', 
+                  border: '1px solid rgba(255,255,255,0.06)',
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center', 
+                  overflow: 'hidden', 
+                  padding: '0.85rem', 
+                  cursor: 'zoom-in' 
+                }}
+              >
+                <img 
+                  src={imagePath} 
+                  alt={title} 
+                  loading="lazy" 
+                  style={{ 
+                    maxWidth: '100%', 
+                    height: 'auto', 
+                    maxHeight: '440px', 
+                    objectFit: 'contain', 
+                    display: 'block',
+                    borderRadius: '2px'
+                  }} 
+                />
+              </div>
+            )}
           </div>
           <p style={{ color: '#cbd5e1', fontSize: '0.85rem', lineHeight: 1.5, margin: 0 }}>{description}</p>
         </motion.div>
