@@ -14,11 +14,9 @@ const HeroSection = () => {
   const mouseX = useMotionValue(typeof window !== 'undefined' ? window.innerWidth / 2 : 0);
   const mouseY = useMotionValue(typeof window !== 'undefined' ? window.innerHeight / 2 : 0);
 
-  // Parallax for the background image
   const bgX = useTransform(mouseX, [0, window.innerWidth], [-15, 15]);
   const bgY = useTransform(mouseY, [0, window.innerHeight], [-15, 15]);
 
-  // Direct 1:1 mapping for the cursor glow (Subtract half width/height to center on cursor)
   const glowX = useTransform(mouseX, v => v - 300); 
   const glowY = useTransform(mouseY, v => v - 300);
 
@@ -27,7 +25,6 @@ const HeroSection = () => {
     mouseY.set(e.clientY);
   };
 
-  // Staggered text reveal variants
   const sentenceVariant = {
     hidden: { opacity: 1 },
     visible: {
@@ -56,12 +53,11 @@ const HeroSection = () => {
         overflow: 'hidden'
       }}
     >
-      {/* Instant Interactive Cursor Glow (Subtle White) */}
       <motion.div 
         style={{
           position: 'absolute',
-          top: 0, // FIXED: Locks origin to top-left for accurate mouse tracking
-          left: 0, // FIXED: Locks origin to top-left for accurate mouse tracking
+          top: 0,
+          left: 0,
           width: '600px', height: '600px',
           background: 'radial-gradient(circle, rgba(255, 255, 255, 0.04) 0%, transparent 70%)',
           borderRadius: '50%',
@@ -72,7 +68,6 @@ const HeroSection = () => {
         }}
       />
 
-      {/* Static Ambient Core Glow */}
       <motion.div 
         animate={{ scale: [1, 1.05, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
@@ -85,7 +80,6 @@ const HeroSection = () => {
         }}
       />
 
-      {/* Background Image Layer */}
       <motion.div 
         style={{
           position: 'absolute',
@@ -150,7 +144,6 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Bouncing Scroll Indicator */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -176,25 +169,24 @@ const AboutSection = ({ setLightboxImage }) => {
       <div style={{ display: 'flex', gap: '4rem', maxWidth: '1000px', alignItems: 'center', flexWrap: 'wrap' }}>
         <div style={{ flex: '1 1 300px' }}>
           <motion.img 
-              src="/images/profile.png" 
-              alt="Profile" 
-              onClick={() => setLightboxImage("/images/profile.png")}
-            
-              whileHover={{ 
-                scale: 1.02,
-                boxShadow: '0 0 25px rgba(245, 158, 11, 0.25)' 
-              }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ duration: 0.4 }}
-              style={{ 
-                width: '100%', 
-                maxWidth: '350px', 
-                borderBottom: '4px solid var(--amber-accent)', 
-                borderRadius: '4px', 
-                display: 'block', 
-                cursor: 'zoom-in' 
-              }}
-            />
+            src="/images/profile.png" 
+            alt="Profile" 
+            onClick={() => setLightboxImage("/images/profile.png")}
+            whileHover={{ 
+              scale: 1.02,
+              boxShadow: '0 0 25px rgba(245, 158, 11, 0.25)' 
+            }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ duration: 0.4 }}
+            style={{ 
+              width: '100%', 
+              maxWidth: '350px', 
+              borderBottom: '4px solid var(--amber-accent)', 
+              borderRadius: '4px', 
+              display: 'block', 
+              cursor: 'zoom-in' 
+            }}
+          />
         </div>
         <div style={{ flex: '1.5 1 400px' }}>
           <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>System Protocol</h2>
@@ -432,21 +424,22 @@ const CertCard = ({ title, description, imagePath, onGroupClick, onImageClick })
       <motion.div
         initial={false}
         animate={{
-          height: isActive ? '380px' : '80px',
+          height: isActive ? 'auto' : '80px',
           backgroundColor: isActive ? 'var(--slate-dark)' : 'rgba(255,255,255,0.02)',
-          boxShadow: isActive ? '0 -20px 40px rgba(0,0,0,0.6)' : 'none'
+          boxShadow: isActive ? '0 -20px 40px rgba(0,0,0,0.7)' : 'none'
         }}
-        transition={{ duration: 0.3, ease: 'easeInOut' }}
+        transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
         style={{
           width: '100%',
-          border: '1px solid rgba(255,255,255,0.05)',
+          border: '1px solid rgba(255,255,255,0.08)',
           borderBottom: '3px solid var(--amber-accent)',
           overflow: 'hidden',
           position: 'absolute',
           bottom: 0, 
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'flex-end'
+          justifyContent: 'flex-end',
+          borderRadius: '4px'
         }}
       >
         <motion.div
@@ -454,7 +447,7 @@ const CertCard = ({ title, description, imagePath, onGroupClick, onImageClick })
           transition={{ duration: 0.2 }}
           style={{ 
             padding: '1.5rem',
-            flexGrow: 1,
+            paddingBottom: '0.75rem',
             display: 'flex', 
             flexDirection: 'column', 
             gap: '1rem',
@@ -463,9 +456,32 @@ const CertCard = ({ title, description, imagePath, onGroupClick, onImageClick })
         >
           <div 
             onClick={(e) => { e.stopPropagation(); if(onImageClick) onImageClick(imagePath); }}
-            style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', padding: '0.5rem', cursor: 'zoom-in' }}
+            style={{ 
+              width: '100%',
+              backgroundColor: 'rgba(0,0,0,0.35)', 
+              borderRadius: '4px', 
+              border: '1px solid rgba(255,255,255,0.06)',
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center', 
+              overflow: 'hidden', 
+              padding: '0.85rem', 
+              cursor: 'zoom-in' 
+            }}
           >
-            <img src={imagePath} alt={title} loading="lazy" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+            <img 
+              src={imagePath} 
+              alt={title} 
+              loading="lazy" 
+              style={{ 
+                maxWidth: '100%', 
+                height: 'auto', 
+                maxHeight: '440px', 
+                objectFit: 'contain', 
+                display: 'block',
+                borderRadius: '2px'
+              }} 
+            />
           </div>
           <p style={{ color: '#cbd5e1', fontSize: '0.85rem', lineHeight: 1.5, margin: 0 }}>{description}</p>
         </motion.div>
@@ -485,10 +501,6 @@ const CertCard = ({ title, description, imagePath, onGroupClick, onImageClick })
 
 const CertificationsSection = ({ setLightboxImage }) => {
   const [activeModal, setActiveModal] = useState(null); 
-
-  useEffect(() => {
-    // Relying on the global document.body.style.overflow handled by App.jsx
-  }, [activeModal]);
 
   const anthropicCerts = [
     { title: "Anthropic Claude 101", description: "Foundational training covering the Claude ecosystem, prompt engineering, and LLM implementation.", imagePath: "/images/certs/Heitor_Quental_Claude_101_certificate.png" },
@@ -511,9 +523,21 @@ const CertificationsSection = ({ setLightboxImage }) => {
   ];
 
   const flyrankCerts = [
-    { title: "FlyRank AI Internship", description: "Certificate of completion for applied artificial intelligence development and enterprise integration.", imagePath: "/images/certs/flyrank-certificate-of-completion.png" },
-    { title: "FlyRank AI Fluency", description: "Certificate of completion for applied artificial intelligence fluency and enterprise integration.", imagePath: "/images/certs/flyrank-certificate-of-completion-ai-fluency.png" },
-    { title: "FlyRank Machine Learning", description: "Certificate of completion focused on machine learning deployments.", imagePath: "/images/certs/flyrank-certificate-of-completion_ML.png" }
+    { 
+      title: "FlyRank Recommendation Letter", 
+      description: "Official executive letter of recommendation from FlyRank's CEO detailing applied artificial intelligence contributions, engineering performance, and work ethic.", 
+      imagePath: "/images/certs/flyrank-recommendation-letter.png" 
+    },
+    { 
+      title: "FlyRank AI Fluency", 
+      description: "Certificate of completion for applied artificial intelligence fluency and enterprise integration.", 
+      imagePath: "/images/certs/flyrank-certificate-of-completion-ai-fluency.png" 
+    },
+    { 
+      title: "FlyRank Machine Learning", 
+      description: "Certificate of completion focused on machine learning deployments.", 
+      imagePath: "/images/certs/flyrank-certificate-of-completion_ML.png" 
+    }
   ];
 
   const senacCerts = [
@@ -540,7 +564,7 @@ const CertificationsSection = ({ setLightboxImage }) => {
 
   const modalConfig = {
     anthropic: { data: anthropicCerts, title: 'Anthropic Collection' },
-    flyrank: { data: flyrankCerts, title: 'FlyRank Internship Documents' },
+    flyrank: { data: flyrankCerts, title: 'FlyRank Internship Documents & Recommendation' },
     senac: { data: senacCerts, title: 'Senac Qualifications' },
     isc2: { data: isc2Certs, title: 'ISC2 Competency Domains' },
     events: { data: eventCerts, title: 'Hackathons, Ideathons & Events' }
@@ -581,7 +605,7 @@ const CertificationsSection = ({ setLightboxImage }) => {
             {currentModal.data.length} verified framework and implementation certificates.
           </p>
 
-          <div style={{ marginTop: '320px', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1rem' }}>
+          <div style={{ marginTop: '440px', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.25rem' }}>
             {currentModal.data.map((cert, index) => (
               <CertCard 
                 key={index}
@@ -610,7 +634,7 @@ const CertificationsSection = ({ setLightboxImage }) => {
           <p style={{ color: '#94a3b8', margin: 0 }}>Verified proficiencies, completed pathways, and academic achievements.</p>
         </motion.div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.25rem' }}>
           
           <CertCard 
             title={`Anthropic Certificates (${anthropicCerts.length})`}
@@ -620,7 +644,7 @@ const CertificationsSection = ({ setLightboxImage }) => {
           />
           <CertCard 
             title={`FlyRank Internship (${flyrankCerts.length})`}
-            description="Certificates of completion for applied artificial intelligence and machine learning development during the FlyRank internship. Click to view all."
+            description="Official letter of recommendation and certificates of completion for applied artificial intelligence and machine learning development during the FlyRank internship. Click to view all."
             imagePath="/images/Flyrank_logo.webp"
             onGroupClick={() => setActiveModal('flyrank')}
           />
@@ -775,7 +799,6 @@ const FooterSection = () => {
   return (
     <footer style={{ backgroundColor: 'var(--slate-dark)', padding: '4rem 10%', textAlign: 'center' }}>
       <div style={{ display: 'flex', justifyContent: 'center', gap: '2.5rem', marginBottom: '2rem' }}>
-        
         <SocialLink href="https://github.com/quentalheitor">
           <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
             <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
@@ -802,7 +825,6 @@ const FooterSection = () => {
           </svg>
           Curriculum Vitae
         </SocialLink>
-
       </div>
       <p style={{ color: '#64748b', fontSize: '0.9rem', letterSpacing: '0.05em' }}>
         Built by Heitor Quental.
@@ -815,7 +837,6 @@ const FooterSection = () => {
 export default function App() {
   const [lightboxImage, setLightboxImage] = useState(null);
 
-  // Global lock for the lightbox overlay
   useEffect(() => {
     if (lightboxImage) {
       document.body.style.overflow = 'hidden';
@@ -840,7 +861,6 @@ export default function App() {
       <SectionDivider />
       <FooterSection />
 
-      {/* Global Fullscreen Image Lightbox */}
       <AnimatePresence>
         {lightboxImage && (
           <motion.div
