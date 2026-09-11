@@ -147,7 +147,10 @@ const translations = {
         {
           title: "FlyRank Recommendation Letter",
           description: "Official executive letter of recommendation from FlyRank's CEO detailing applied artificial intelligence contributions, engineering performance, and work ethic.",
-          imagePath: "/images/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-1.webp"
+          imagePath: [
+            "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral_Recommendation_Letter.webp",
+            "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral_Recommendation_Letter_2.webp"
+          ]
         },
         {
           title: "FlyRank AI Fluency",
@@ -165,15 +168,15 @@ const translations = {
         { title: "Senac Logic Programming", description: "Foundational training in programming logic and algorithm structuring.", imagePath: "/images/certs/Logic_senac.png" }
       ],
       isc2List: [
-        { title: "ISC2 CC Domain 1", description: "Security Principles: Foundation of security concepts, risk management, and security controls.", imagePath: "/images/isc2_domain_1_competency.webp" },
-        { title: "ISC2 CC Domain 2", description: "Business Continuity (BC), Disaster Recovery (DR) & Incident Response Concepts.", imagePath: "/images/isc2_domain_2_competency.webp" },
-        { title: "ISC2 CC Domain 3", description: "Access Controls Concepts: Physical and logical access controls and identity management.", imagePath: "/images/isc2_domain_3_competency.webp" },
-        { title: "ISC2 CC Domain 4", description: "Network Security: Computer networking concepts and securing network architectures.", imagePath: "/images/isc2_domain_4_competency.webp" },
-        { title: "ISC2 CC Domain 5", description: "Security Operations: Data security, system hardening, and security policies.", imagePath: "/images/isc2_domain_5_competency.webp" }
+        { title: "ISC2 CC Domain 1", description: "Security Principles: Foundation of security concepts, risk management, and security controls.", imagePath: "/images/certs/isc2_domain_1_competency.webp" },
+        { title: "ISC2 CC Domain 2", description: "Business Continuity (BC), Disaster Recovery (DR) & Incident Response Concepts.", imagePath: "/images/certs/isc2_domain_2_competency.webp" },
+        { title: "ISC2 CC Domain 3", description: "Access Controls Concepts: Physical and logical access controls and identity management.", imagePath: "/images/certs/isc2_domain_3_competency.webp" },
+        { title: "ISC2 CC Domain 4", description: "Network Security: Computer networking concepts and securing network architectures.", imagePath: "/images/certs/isc2_domain_4_competency.webp" },
+        { title: "ISC2 CC Domain 5", description: "Security Operations: Data security, system hardening, and security policies.", imagePath: "/images/certs/isc2_domain_5_competency.webp" }
       ],
       eventList: [
         { title: "BBTS Hackathon", description: "Participation and project deployment in the Banco do Brasil Tecnologia e Serviços competitive hackathon.", imagePath: "/images/certs/BBTS_hackathon.png" },
-        { title: "Ideathon — Maratona de Ideias", description: "Certificate of participation and collaborative solution structuring in the Ideathon innovation marathon.", imagePath: "/images/Heitor Quental Feitosa Kehrle do Amaral-1.webp" }
+        { title: "Ideathon — Maratona de Ideias", description: "Certificate of participation and collaborative solution structuring in the Ideathon innovation marathon.", imagePath: "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral.webp" }
       ],
       otherList: [
         { title: "Microsoft Azure AI Fundamentals", description: "Foundational certification validating knowledge of machine learning and artificial intelligence concepts.", imagePath: "/images/certs/AI-900.png" },
@@ -190,7 +193,7 @@ const translations = {
       submittingBtn: "Transmitting...",
       successTitle: "Payload Delivered.",
       successDesc: "Your transmission has been received. I will establish contact shortly.",
-      error: "Falha na transmissão. Verifique sua conexão e tente novamente."
+      error: "Transmission failed. Please verify your connection and try again."
     },
     footer: {
       builtBy: "Built by Heitor Quental.",
@@ -341,7 +344,10 @@ const translations = {
         {
           title: "Carta de Recomendação FlyRank",
           description: "Carta executiva de recomendação do CEO da FlyRank detalhando contribuições em inteligência artificial aplicada, desempenho de engenharia e ética de trabalho.",
-          imagePath: "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral_Recommendation_Letter.webp"
+          imagePath: [
+            "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral_Recommendation_Letter.webp",
+            "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral_Recommendation_Letter_2.webp"
+          ]
         },
         {
           title: "FlyRank AI Fluency",
@@ -359,15 +365,15 @@ const translations = {
         { title: "Senac Lógica de Programação", description: "Formação fundamental em lógica de programação e estruturação de algoritmos.", imagePath: "/images/certs/Logic_senac.png" }
       ],
       isc2List: [
-        { title: "ISC2 CC Domínio 1", description: "Princípios de Segurança: Fundamentos de segurança, gestão de riscos e controles de segurança.", imagePath: "/images/isc2_domain_1_competency.webp" },
-        { title: "ISC2 CC Domínio 2", description: "Continuidade de Negócios (BC), Recuperação de Desastres (DR) e Conceitos de Resposta a Incidentes.", imagePath: "/images/isc2_domain_2_competency.webp" },
-        { title: "ISC2 CC Domínio 3", description: "Conceitos de Controle de Acesso: Controles de acesso físico e lógico e gestão de identidade.", imagePath: "/images/isc2_domain_3_competency.webp" },
-        { title: "ISC2 CC Domínio 4", description: "Segurança de Redes: Conceitos de redes de computadores e proteção de arquiteturas de rede.", imagePath: "/images/isc2_domain_4_competency.webp" },
-        { title: "ISC2 CC Domínio 5", description: "Operações de Segurança: Segurança de dados, hardening de sistemas e políticas de segurança.", imagePath: "/images/isc2_domain_5_competency.webp" }
+        { title: "ISC2 CC Domínio 1", description: "Princípios de Segurança: Fundamentos de segurança, gestão de riscos e controles de segurança.", imagePath: "/images/certs/isc2_domain_1_competency.webp" },
+        { title: "ISC2 CC Domínio 2", description: "Continuidade de Negócios (BC), Recuperação de Desastres (DR) e Conceitos de Resposta a Incidentes.", imagePath: "/images/certs/isc2_domain_2_competency.webp" },
+        { title: "ISC2 CC Domínio 3", description: "Conceitos de Controle de Acesso: Controles de acesso físico e lógico e gestão de identidade.", imagePath: "/images/certs/isc2_domain_3_competency.webp" },
+        { title: "ISC2 CC Domínio 4", description: "Segurança de Redes: Conceitos de redes de computadores e proteção de arquiteturas de rede.", imagePath: "/images/certs/isc2_domain_4_competency.webp" },
+        { title: "ISC2 CC Domínio 5", description: "Operações de Segurança: Segurança de dados, hardening de sistemas e políticas de segurança.", imagePath: "/images/certs/isc2_domain_5_competency.webp" }
       ],
       eventList: [
         { title: "Hackathon BBTS", description: "Participação e implementação de projeto no hackathon competitivo do Banco do Brasil Tecnologia e Serviços.", imagePath: "/images/certs/BBTS_hackathon.png" },
-        { title: "Ideathon — Maratona de Ideias", description: "Certificado de participação e estruturação de soluções colaborativas na maratona de inovação Ideathon.", imagePath: "/images/certs/Heitor Quental Feitosa Kehrle do Amaral-1.webp" }
+        { title: "Ideathon — Maratona de Ideias", description: "Certificado de participação e estruturação de soluções colaborativas na maratona de inovação Ideathon.", imagePath: "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral.webp" }
       ],
       otherList: [
         { title: "Microsoft Azure AI Fundamentals", description: "Certificação fundamental validando conhecimentos em conceitos de inteligência artificial e machine learning.", imagePath: "/images/certs/AI-900.png" },
@@ -432,25 +438,20 @@ const LanguageProvider = ({ children }) => {
 
 const useLanguage = () => useContext(LanguageContext);
 
-// --- FLOATING LANGUAGE SWITCH WITH TEMPORARY HINT ---
+// --- FLOATING LANGUAGE SWITCH WITH EPHEMERAL INDICATOR ---
 const LanguageSwitch = () => {
   const { lang, setLanguage } = useLanguage();
-  const [showHint, setShowHint] = useState(false);
+  const [showHint, setShowHint] = useState(true);
 
   useEffect(() => {
-    const hintDismissed = localStorage.getItem('lang_hint_dismissed');
-    if (!hintDismissed) {
-      setShowHint(true);
-      const timer = setTimeout(() => {
-        dismissHint();
-      }, 6000);
-      return () => clearTimeout(timer);
-    }
+    const timer = setTimeout(() => {
+      setShowHint(false);
+    }, 6500);
+    return () => clearTimeout(timer);
   }, []);
 
   const dismissHint = () => {
     setShowHint(false);
-    localStorage.setItem('lang_hint_dismissed', 'true');
   };
 
   const handleSelectLanguage = (code) => {
@@ -793,7 +794,7 @@ const ProjectCard = ({ title, stack, description, imagePath, repoLink, repoBtnTe
           whileTap={{ scale: 0.98 }}
           style={{ padding: '1rem', backgroundColor: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', cursor: 'zoom-in' }}
         >
-          <img src={imagePath} alt={title} loading="lazy" style={{ width: '100%', height: 'auto', display: 'block' }} />
+          <img src={imagePath} alt={title} loading="eager" style={{ width: '100%', height: 'auto', display: 'block' }} />
         </motion.div>
       </div>
     </motion.div>
@@ -962,7 +963,7 @@ const CertCard = ({ title, description, imagePath, onGroupClick, onImageClick })
             pointerEvents: isActive ? 'auto' : 'none'
           }}
         >
-          {/* Image Container: handles either 1 or multiple images */}
+          {/* Handles single or dual images */}
           <div 
             style={{ 
               width: '100%',
@@ -976,7 +977,7 @@ const CertCard = ({ title, description, imagePath, onGroupClick, onImageClick })
               imagePath.map((src, idx) => (
                 <div
                   key={idx}
-                  onClick={(e) => { e.stopPropagation(); if(onImageClick) onImageClick(src); }}
+                  onClick={(e) => { e.stopPropagation(); if (onImageClick) onImageClick(src); }}
                   style={{
                     flex: 1,
                     backgroundColor: 'rgba(0,0,0,0.35)',
@@ -987,13 +988,14 @@ const CertCard = ({ title, description, imagePath, onGroupClick, onImageClick })
                     justifyContent: 'center',
                     overflow: 'hidden',
                     padding: '0.5rem',
-                    cursor: 'zoom-in'
+                    cursor: 'zoom-in',
+                    minWidth: 0
                   }}
                 >
                   <img 
                     src={src} 
-                    alt={`${title} - page ${idx + 1}`} 
-                    loading="lazy" 
+                    alt={`${title} - Page ${idx + 1}`} 
+                    loading="eager"
                     style={{ 
                       maxWidth: '100%', 
                       height: 'auto', 
@@ -1007,7 +1009,7 @@ const CertCard = ({ title, description, imagePath, onGroupClick, onImageClick })
               ))
             ) : (
               <div 
-                onClick={(e) => { e.stopPropagation(); if(onImageClick) onImageClick(imagePath); }}
+                onClick={(e) => { e.stopPropagation(); if (onImageClick) onImageClick(imagePath); }}
                 style={{ 
                   width: '100%',
                   backgroundColor: 'rgba(0,0,0,0.35)', 
@@ -1024,7 +1026,7 @@ const CertCard = ({ title, description, imagePath, onGroupClick, onImageClick })
                 <img 
                   src={imagePath} 
                   alt={title} 
-                  loading="lazy" 
+                  loading="eager" 
                   style={{ 
                     maxWidth: '100%', 
                     height: 'auto', 
@@ -1341,6 +1343,41 @@ export default function App() {
       document.body.style.overflow = 'unset';
     }
   }, [lightboxImage]);
+
+  // Pre-load all certificate and group icon images immediately on site load
+  useEffect(() => {
+    const certsData = translations.en.certs;
+    const urls = new Set([
+      "/images/Anthropic_logo.webp",
+      "/images/Flyrank_logo.webp",
+      "/images/Senac_logo.webp",
+      "/images/ISC2_logo.webp",
+      "/images/events_logo.webp"
+    ]);
+
+    const collectPaths = (list) => {
+      if (!list) return;
+      list.forEach((item) => {
+        if (Array.isArray(item.imagePath)) {
+          item.imagePath.forEach((src) => urls.add(src));
+        } else if (item.imagePath) {
+          urls.add(item.imagePath);
+        }
+      });
+    };
+
+    collectPaths(certsData.anthropicList);
+    collectPaths(certsData.flyrankList);
+    collectPaths(certsData.senacList);
+    collectPaths(certsData.isc2List);
+    collectPaths(certsData.eventList);
+    collectPaths(certsData.otherList);
+
+    urls.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
 
   return (
     <LanguageProvider>
