@@ -165,15 +165,15 @@ const translations = {
         { title: "Senac Logic Programming", description: "Foundational training in programming logic and algorithm structuring.", imagePath: "/images/certs/Logic_senac.png" }
       ],
       isc2List: [
-        { title: "ISC2 CC Domain 1", description: "Security Principles: Foundation of security concepts, risk management, and security controls.", imagePath: "/images/certs/isc2_domain_1_competency.webp" },
-        { title: "ISC2 CC Domain 2", description: "Business Continuity (BC), Disaster Recovery (DR) & Incident Response Concepts.", imagePath: "/images/certs/isc2_domain_2_competency.webp" },
-        { title: "ISC2 CC Domain 3", description: "Access Controls Concepts: Physical and logical access controls and identity management.", imagePath: "/images/certs/isc2_domain_3_competency.webp" },
-        { title: "ISC2 CC Domain 4", description: "Network Security: Computer networking concepts and securing network architectures.", imagePath: "/images/certs/isc2_domain_4_competency.webp" },
-        { title: "ISC2 CC Domain 5", description: "Security Operations: Data security, system hardening, and security policies.", imagePath: "/images/certs/isc2_domain_5_competency.webp" }
+        { title: "ISC2 CC Domain 1", description: "Security Principles: Foundation of security concepts, risk management, and security controls.", imagePath: "/images/isc2_domain_1_competency.webp" },
+        { title: "ISC2 CC Domain 2", description: "Business Continuity (BC), Disaster Recovery (DR) & Incident Response Concepts.", imagePath: "/images/isc2_domain_2_competency.webp" },
+        { title: "ISC2 CC Domain 3", description: "Access Controls Concepts: Physical and logical access controls and identity management.", imagePath: "/images/isc2_domain_3_competency.webp" },
+        { title: "ISC2 CC Domain 4", description: "Network Security: Computer networking concepts and securing network architectures.", imagePath: "/images/isc2_domain_4_competency.webp" },
+        { title: "ISC2 CC Domain 5", description: "Security Operations: Data security, system hardening, and security policies.", imagePath: "/images/isc2_domain_5_competency.webp" }
       ],
       eventList: [
         { title: "BBTS Hackathon", description: "Participation and project deployment in the Banco do Brasil Tecnologia e Serviços competitive hackathon.", imagePath: "/images/certs/BBTS_hackathon.png" },
-        { title: "Ideathon — Maratona de Ideias", description: "Certificate of participation and collaborative solution structuring in the Ideathon innovation marathon.", imagePath: "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral.webp" }
+        { title: "Ideathon — Maratona de Ideias", description: "Certificate of participation and collaborative solution structuring in the Ideathon innovation marathon.", imagePath: "/images/Heitor Quental Feitosa Kehrle do Amaral-1.webp" }
       ],
       otherList: [
         { title: "Microsoft Azure AI Fundamentals", description: "Foundational certification validating knowledge of machine learning and artificial intelligence concepts.", imagePath: "/images/certs/AI-900.png" },
