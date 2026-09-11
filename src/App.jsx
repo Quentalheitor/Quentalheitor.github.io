@@ -180,8 +180,8 @@ const translations = {
           title: "Ideathon — Maratona de Ideias", 
           description: "Certificate of participation and winner award voucher for collaborative innovation and solution structuring in the Ideathon marathon.", 
           imagePath: [
-            "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral.webp",
-            "/images/certs/6992ed8b-82c1-4532-9509-1318af7905c8.webp"
+            "/images/Heitor_Quental_Feitosa_Kehrle_do_Amaral.webp",
+            "/images/6992ed8b-82c1-4532-9509-1318af7905c8.webp"
           ]
         }
       ],
@@ -384,8 +384,8 @@ const translations = {
           title: "Ideathon — Maratona de Ideias", 
           description: "Certificado de participação e voucher de premiação pela vitória e estruturação colaborativa de soluções na maratona de inovação Ideathon.", 
           imagePath: [
-            "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral.webp",
-            "/images/certs/6992ed8b-82c1-4532-9509-1318af7905c8.webp"
+            "/images/Heitor_Quental_Feitosa_Kehrle_do_Amaral.webp",
+            "/images/6992ed8b-82c1-4532-9509-1318af7905c8.webp"
           ]
         }
       ],
