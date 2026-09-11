@@ -139,8 +139,23 @@ export const translations = {
           description: "Certificate of completion focused on machine learning deployments.",
           imagePath: "/images/certs/flyrank-certificate-of-completion_ML.png"
         }
+      ],
+            eventList: [
+  { 
+    title: "BBTS Hackathon", 
+    description: "Participation and project deployment in the Banco do Brasil Tecnologia e Serviços competitive hackathon.", 
+    imagePath: "/images/certs/BBTS_hackathon.png" 
+  },
+  { 
+    title: "Ideathon — Maratona de Ideias", 
+    description: "Certificate of participation and winner award voucher for collaborative innovation and solution structuring in the Ideathon marathon.", 
+    imagePath: [
+      "/images/Heitor Quental Feitosa Kehrle do Amaral-1.webp",
+      "/images/6992ed8b-82c1-4532-9509-1318af7905c8.webp" // Replace with your exact voucher filename
       ]
-    },
+      }
+      ],
+    
     contact: {
       title: "Initiate Connection",
       subtitle: "Interested in discussing infrastructure, security, or deploying new models? Open a secure channel below.",
@@ -301,6 +316,23 @@ export const translations = {
         }
       ]
     },
+    // --- Portuguese (translations.pt.certs.eventList) ---
+      eventList: [
+        { 
+          title: "Hackathon BBTS", 
+          description: "Participação e implementação de projeto no hackathon competitivo do Banco do Brasil Tecnologia e Serviços.", 
+          imagePath: "/images/certs/BBTS_hackathon.png" 
+        },
+        { 
+          title: "Ideathon — Maratona de Ideias", 
+          description: "Certificado de participação e voucher de premiação pela vitória e estruturação colaborativa de soluções na maratona de inovação Ideathon.", 
+          imagePath: [
+            "/images/Heitor Quental Feitosa Kehrle do Amaral-1.webp",
+            "/images/6992ed8b-82c1-4532-9509-1318af7905c8.webp" // Substitua pelo nome exato do arquivo do voucher
+          ] 
+        }
+      ],
+    
     contact: {
       title: "Iniciar Conexão",
       subtitle: "Interessado em discutir infraestrutura, segurança ou implementação de novos modelos? Abra um canal seguro abaixo.",
