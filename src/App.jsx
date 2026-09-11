@@ -373,7 +373,7 @@ const translations = {
       ],
       eventList: [
         { title: "Hackathon BBTS", description: "Participação e implementação de projeto no hackathon competitivo do Banco do Brasil Tecnologia e Serviços.", imagePath: "/images/certs/BBTS_hackathon.png" },
-        { title: "Ideathon — Maratona de Ideias", description: "Certificado de participação e estruturação de soluções colaborativas na maratona de inovação Ideathon.", imagePath: "/images/certs/Heitor Quental Feitosa Kehrle do Amaral-1.webp" }
+        { title: "Ideathon — Maratona de Ideias", description: "Certificado de participação e estruturação de soluções colaborativas na maratona de inovação Ideathon.", imagePath: "/images/Heitor Quental Feitosa Kehrle do Amaral-1.webp" }
       ],
       otherList: [
         { title: "Microsoft Azure AI Fundamentals", description: "Certificação fundamental validando conhecimentos em conceitos de inteligência artificial e machine learning.", imagePath: "/images/certs/AI-900.png" },
