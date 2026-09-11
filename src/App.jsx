@@ -189,7 +189,7 @@ const translations = {
       submittingBtn: "Transmitting...",
       successTitle: "Payload Delivered.",
       successDesc: "Your transmission has been received. I will establish contact shortly.",
-      error: "Transmission failed. Please verify your connection and try again."
+      error: "Falha na transmissão. Verifique sua conexão e tente novamente."
     },
     footer: {
       builtBy: "Built by Heitor Quental.",
@@ -430,45 +430,122 @@ const LanguageProvider = ({ children }) => {
 
 const useLanguage = () => useContext(LanguageContext);
 
-// --- FLOATING LANGUAGE SWITCH ---
+// --- FLOATING LANGUAGE SWITCH WITH TEMPORARY HINT ---
 const LanguageSwitch = () => {
   const { lang, setLanguage } = useLanguage();
+  const [showHint, setShowHint] = useState(false);
+
+  useEffect(() => {
+    const hintDismissed = localStorage.getItem('lang_hint_dismissed');
+    if (!hintDismissed) {
+      setShowHint(true);
+      const timer = setTimeout(() => {
+        dismissHint();
+      }, 6000);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const dismissHint = () => {
+    setShowHint(false);
+    localStorage.setItem('lang_hint_dismissed', 'true');
+  };
+
+  const handleSelectLanguage = (code) => {
+    setLanguage(code);
+    dismissHint();
+  };
 
   return (
-    <div style={{
-      position: 'fixed',
-      top: '20px',
-      right: '20px',
-      zIndex: 1000,
-      display: 'flex',
-      gap: '0.25rem',
-      backgroundColor: 'rgba(15, 23, 42, 0.85)',
-      border: '1px solid rgba(255, 255, 255, 0.1)',
-      backdropFilter: 'blur(8px)',
-      padding: '4px',
-      borderRadius: '4px'
-    }}>
-      {['en', 'pt'].map((code) => (
-        <button
-          key={code}
-          onClick={() => setLanguage(code)}
-          style={{
-            background: lang === code ? 'var(--amber-accent)' : 'transparent',
-            color: lang === code ? '#000' : '#cbd5e1',
-            border: 'none',
-            padding: '4px 10px',
-            fontWeight: 700,
-            fontSize: '0.75rem',
-            cursor: 'pointer',
-            borderRadius: '2px',
-            textTransform: 'uppercase',
-            letterSpacing: '0.05em',
-            transition: 'all 0.2s ease'
-          }}
-        >
-          {code}
-        </button>
-      ))}
+    <div style={{ position: 'fixed', top: '20px', right: '20px', zIndex: 1000, display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+      {/* Language Switch Toggle Buttons */}
+      <div style={{
+        display: 'flex',
+        gap: '0.25rem',
+        backgroundColor: 'rgba(15, 23, 42, 0.92)',
+        border: '1px solid rgba(255, 255, 255, 0.12)',
+        backdropFilter: 'blur(10px)',
+        padding: '4px',
+        borderRadius: '4px',
+        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.4)'
+      }}>
+        {['en', 'pt'].map((code) => (
+          <button
+            key={code}
+            onClick={() => handleSelectLanguage(code)}
+            style={{
+              background: lang === code ? 'var(--amber-accent)' : 'transparent',
+              color: lang === code ? '#000' : '#cbd5e1',
+              border: 'none',
+              padding: '5px 12px',
+              fontWeight: 700,
+              fontSize: '0.75rem',
+              cursor: 'pointer',
+              borderRadius: '2px',
+              textTransform: 'uppercase',
+              letterSpacing: '0.05em',
+              transition: 'all 0.2s ease'
+            }}
+          >
+            {code}
+          </button>
+        ))}
+      </div>
+
+      {/* Temporary Floating Hint Tooltip */}
+      <AnimatePresence>
+        {showHint && (
+          <motion.div
+            initial={{ opacity: 0, y: -8, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -8, scale: 0.95 }}
+            transition={{ duration: 0.3 }}
+            onClick={dismissHint}
+            style={{
+              marginTop: '10px',
+              backgroundColor: 'rgba(15, 23, 42, 0.96)',
+              border: '1px solid var(--amber-accent)',
+              boxShadow: '0 8px 30px rgba(245, 158, 11, 0.25)',
+              borderRadius: '6px',
+              padding: '0.75rem 1rem',
+              maxWidth: '260px',
+              cursor: 'pointer',
+              position: 'relative'
+            }}
+          >
+            {/* Top Indicator Arrow */}
+            <div style={{
+              position: 'absolute',
+              top: '-6px',
+              right: '32px',
+              width: '10px',
+              height: '10px',
+              backgroundColor: 'var(--slate-dark)',
+              borderTop: '1px solid var(--amber-accent)',
+              borderLeft: '1px solid var(--amber-accent)',
+              transform: 'rotate(45deg)'
+            }} />
+
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
+              <motion.span
+                animate={{ y: [0, -3, 0] }}
+                transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
+                style={{ color: 'var(--amber-accent)', fontSize: '0.9rem', lineHeight: 1 }}
+              >
+                ▲
+              </motion.span>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
+                <p style={{ margin: 0, fontSize: '0.78rem', fontWeight: 600, color: '#f8fafc', lineHeight: 1.3 }}>
+                  Switch Language / Mudar Idioma
+                </p>
+                <p style={{ margin: 0, fontSize: '0.7rem', color: '#94a3b8' }}>
+                  Click to select English or Português.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
