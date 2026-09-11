@@ -147,7 +147,7 @@ const translations = {
         {
           title: "FlyRank Recommendation Letter",
           description: "Official executive letter of recommendation from FlyRank's CEO detailing applied artificial intelligence contributions, engineering performance, and work ethic.",
-          imagePath: "/images/certs/flyrank-recommendation-letter.png"
+          imagePath: "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral_Recommendation_Letter.webp"
         },
         {
           title: "FlyRank AI Fluency",
@@ -165,14 +165,15 @@ const translations = {
         { title: "Senac Logic Programming", description: "Foundational training in programming logic and algorithm structuring.", imagePath: "/images/certs/Logic_senac.png" }
       ],
       isc2List: [
-        { title: "ISC2 CC Domain 1", description: "Security Principles: Foundation of security concepts, risk management, and security controls.", imagePath: "/images/certs/isc2_domain_1_competency.png" },
-        { title: "ISC2 CC Domain 2", description: "Business Continuity (BC), Disaster Recovery (DR) & Incident Response Concepts.", imagePath: "/images/certs/isc2_domain_2_competency.png" },
-        { title: "ISC2 CC Domain 3", description: "Access Controls Concepts: Physical and logical access controls and identity management.", imagePath: "/images/certs/isc2_domain_3_competency.png" },
-        { title: "ISC2 CC Domain 4", description: "Network Security: Computer networking concepts and securing network architectures.", imagePath: "/images/certs/isc2_domain_4_competency.png" },
-        { title: "ISC2 CC Domain 5", description: "Security Operations: Data security, system hardening, and security policies.", imagePath: "/images/certs/isc2_domain_5_competency.png" }
+        { title: "ISC2 CC Domain 1", description: "Security Principles: Foundation of security concepts, risk management, and security controls.", imagePath: "/images/certs/isc2_domain_1_competency.webp" },
+        { title: "ISC2 CC Domain 2", description: "Business Continuity (BC), Disaster Recovery (DR) & Incident Response Concepts.", imagePath: "/images/certs/isc2_domain_2_competency.webp" },
+        { title: "ISC2 CC Domain 3", description: "Access Controls Concepts: Physical and logical access controls and identity management.", imagePath: "/images/certs/isc2_domain_3_competency.webp" },
+        { title: "ISC2 CC Domain 4", description: "Network Security: Computer networking concepts and securing network architectures.", imagePath: "/images/certs/isc2_domain_4_competency.webp" },
+        { title: "ISC2 CC Domain 5", description: "Security Operations: Data security, system hardening, and security policies.", imagePath: "/images/certs/isc2_domain_5_competency.webp" }
       ],
       eventList: [
-        { title: "BBTS Hackathon", description: "Participation and project deployment in the Banco do Brasil Tecnologia e Serviços competitive hackathon.", imagePath: "/images/certs/BBTS_hackathon.png" }
+        { title: "BBTS Hackathon", description: "Participation and project deployment in the Banco do Brasil Tecnologia e Serviços competitive hackathon.", imagePath: "/images/certs/BBTS_hackathon.png" },
+        { title: "Ideathon — Maratona de Ideias", description: "Certificate of participation and collaborative solution structuring in the Ideathon innovation marathon.", imagePath: "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral.webp" }
       ],
       otherList: [
         { title: "Microsoft Azure AI Fundamentals", description: "Foundational certification validating knowledge of machine learning and artificial intelligence concepts.", imagePath: "/images/certs/AI-900.png" },
@@ -340,7 +341,7 @@ const translations = {
         {
           title: "Carta de Recomendação FlyRank",
           description: "Carta executiva de recomendação do CEO da FlyRank detalhando contribuições em inteligência artificial aplicada, desempenho de engenharia e ética de trabalho.",
-          imagePath: "/images/certs/flyrank-recommendation-letter.png"
+          imagePath: "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral_Recommendation_Letter.webp"
         },
         {
           title: "FlyRank AI Fluency",
@@ -358,14 +359,15 @@ const translations = {
         { title: "Senac Lógica de Programação", description: "Formação fundamental em lógica de programação e estruturação de algoritmos.", imagePath: "/images/certs/Logic_senac.png" }
       ],
       isc2List: [
-        { title: "ISC2 CC Domínio 1", description: "Princípios de Segurança: Fundamentos de segurança, gestão de riscos e controles de segurança.", imagePath: "/images/certs/isc2_domain_1_competency.png" },
-        { title: "ISC2 CC Domínio 2", description: "Continuidade de Negócios (BC), Recuperação de Desastres (DR) e Conceitos de Resposta a Incidentes.", imagePath: "/images/certs/isc2_domain_2_competency.png" },
-        { title: "ISC2 CC Domínio 3", description: "Conceitos de Controle de Acesso: Controles de acesso físico e lógico e gestão de identidade.", imagePath: "/images/certs/isc2_domain_3_competency.png" },
-        { title: "ISC2 CC Domínio 4", description: "Segurança de Redes: Conceitos de redes de computadores e proteção de arquiteturas de rede.", imagePath: "/images/certs/isc2_domain_4_competency.png" },
-        { title: "ISC2 CC Domínio 5", description: "Operações de Segurança: Segurança de dados, hardening de sistemas e políticas de segurança.", imagePath: "/images/certs/isc2_domain_5_competency.png" }
+        { title: "ISC2 CC Domínio 1", description: "Princípios de Segurança: Fundamentos de segurança, gestão de riscos e controles de segurança.", imagePath: "/images/certs/isc2_domain_1_competency.webp" },
+        { title: "ISC2 CC Domínio 2", description: "Continuidade de Negócios (BC), Recuperação de Desastres (DR) e Conceitos de Resposta a Incidentes.", imagePath: "/images/certs/isc2_domain_2_competency.webp" },
+        { title: "ISC2 CC Domínio 3", description: "Conceitos de Controle de Acesso: Controles de acesso físico e lógico e gestão de identidade.", imagePath: "/images/certs/isc2_domain_3_competency.webp" },
+        { title: "ISC2 CC Domínio 4", description: "Segurança de Redes: Conceitos de redes de computadores e proteção de arquiteturas de rede.", imagePath: "/images/certs/isc2_domain_4_competency.webp" },
+        { title: "ISC2 CC Domínio 5", description: "Operações de Segurança: Segurança de dados, hardening de sistemas e políticas de segurança.", imagePath: "/images/certs/isc2_domain_5_competency.webp" }
       ],
       eventList: [
-        { title: "Hackathon BBTS", description: "Participação e implementação de projeto no hackathon competitivo do Banco do Brasil Tecnologia e Serviços.", imagePath: "/images/certs/BBTS_hackathon.png" }
+        { title: "Hackathon BBTS", description: "Participação e implementação de projeto no hackathon competitivo do Banco do Brasil Tecnologia e Serviços.", imagePath: "/images/certs/BBTS_hackathon.png" },
+        { title: "Ideathon — Maratona de Ideias", description: "Certificado de participação e estruturação de soluções colaborativas na maratona de inovação Ideathon.", imagePath: "/images/certs/Heitor_Quental_Feitosa_Kehrle_do_Amaral.webp" }
       ],
       otherList: [
         { title: "Microsoft Azure AI Fundamentals", description: "Certificação fundamental validando conhecimentos em conceitos de inteligência artificial e machine learning.", imagePath: "/images/certs/AI-900.png" },
@@ -458,7 +460,6 @@ const LanguageSwitch = () => {
 
   return (
     <div style={{ position: 'fixed', top: '20px', right: '20px', zIndex: 1000, display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
-      {/* Language Switch Toggle Buttons */}
       <div style={{
         display: 'flex',
         gap: '0.25rem',
@@ -492,7 +493,6 @@ const LanguageSwitch = () => {
         ))}
       </div>
 
-      {/* Temporary Floating Hint Tooltip */}
       <AnimatePresence>
         {showHint && (
           <motion.div
@@ -513,7 +513,6 @@ const LanguageSwitch = () => {
               position: 'relative'
             }}
           >
-            {/* Top Indicator Arrow */}
             <div style={{
               position: 'absolute',
               top: '-6px',
