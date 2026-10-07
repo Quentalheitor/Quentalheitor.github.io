@@ -358,8 +358,8 @@ export const translations = {
           title: "Carta de Recomendação FlyRank",
           description: "Carta executiva de recomendação do CEO da FlyRank detalhando contribuições em inteligência artificial aplicada, 420h registradas e desempenho de engenharia.",
           imagePath: [
-            "/images/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-1.webp",
-            "/images/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-2.webp"
+            "/images/certs/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-1.webp",
+            "/images/certs/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-2.webp"
           ]
         },
         {
