@@ -140,8 +140,8 @@ export const translations = {
           title: "FlyRank Recommendation Letter",
           description: "Official executive letter of recommendation from FlyRank's CEO detailing applied AI contributions, 420h logged, and engineering performance.",
           imagePath: [
-            "/images/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-1.webp",
-            "/images/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-2.webp"
+            "/images/certs/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-1.webp",
+            "/images/certs/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-2.webp"
           ]
         },
         {
