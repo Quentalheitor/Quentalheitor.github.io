@@ -14,7 +14,7 @@ export const translations = {
       title: "Deployed Architecture",
       subtitle: "Production architectures, ML pipelines, and security tooling.",
       repoBtn: "View Repository",
-      expandPrompt: "Click image to inspect telemetry",
+      expandHint: "Click to inspect telemetry",
       items: [
         {
           title: "Endpoint Arbiter",
@@ -66,8 +66,8 @@ export const translations = {
       lastUpdated: "Last Updated: October 6, 2026",
       tasks: [
         {
-          category: "Research & Development",
-          title: "Endpoint Arbiter (Phase 2 & 3)",
+          category: "Research and Development",
+          title: "Endpoint Arbiter (Phase 2 and 3)",
           detail: "Engineering Phase 2 of Endpoint Arbiter, expanding the Sigma rule engine, calibrating ML alert classifiers, and preparing the public benchmark for SOC defensive evaluation."
         },
         {
@@ -87,117 +87,41 @@ export const translations = {
         },
         {
           category: "Applied Engineering",
-          title: "Event-Driven & Agentic Systems",
+          title: "Event-Driven and Agentic Systems",
           detail: "Designing asynchronous orchestration workflows with FastAPI, Inngest, DuckDB, and Model Context Protocol (MCP) servers for robust, rate-limited multi-agent execution."
         }
       ]
     },
     certs: {
-      title: "Credentials & Validation",
+      title: "Credentials and Validation",
       subtitle: "Verified proficiencies, completed pathways, and academic achievements.",
       modalClose: "CLOSE",
-      modalSubtitle: (count) => `${count} verified framework and implementation certificates.`,
-      groups: {
-        isc2: {
-          title: (count) => `ISC2 Certification (${count})`,
-          desc: "Official Certified in Cybersecurity (CC) credential and domain competencies across core security principles, IAM, and incident response. Click to view.",
-          modalTitle: "ISC2 Cybersecurity Credentials"
+      viewBtn: "View Credentials",
+      groups: [
+        {
+          id: "flyrank",
+          title: "FlyRank AI Internship (4)",
+          desc: "Executive recommendation letter, Backend AI Engineering certificate, AI Fluency, and ML Track completion.",
+          image: "/images/certs/flyrank-certificate-of-completion-backend-ai-engineering.webp"
         },
-        flyrank: {
-          title: (count) => `FlyRank AI Internship (${count})`,
-          desc: "Official executive letter of recommendation, Backend AI Engineering certificate, and ML Track graduation documents. Click to view all.",
-          modalTitle: "FlyRank Internship Documents & Credentials"
+        {
+          id: "isc2",
+          title: "ISC2 Cybersecurity (6)",
+          desc: "Official CC credential (#4079917) and 5 domain competencies in access control, network defense, and operations.",
+          image: "/images/certs/CC_cert_isc2.webp"
         },
-        anthropic: {
-          title: (count) => `Anthropic Academy (${count})`,
-          desc: "A verified collection of 17 Anthropic certifications covering Claude ecosystems, MCP, agent skills, subagents, and AI Fluency frameworks. Click to view all.",
-          modalTitle: "Anthropic Collection"
+        {
+          id: "anthropic",
+          title: "Anthropic Academy (17)",
+          desc: "Verified certifications covering Claude ecosystems, MCP architecture, agent skills, and AI Fluency frameworks.",
+          image: "/images/certs/Heitor_Quental_Claude_101_certificate.png"
         },
-        senac: {
-          title: (count) => `Senac Certifications (${count})`,
-          desc: "Software development training spanning front-end, back-end, and logical programming architectures. Click to view all.",
-          modalTitle: "Senac Qualifications"
-        },
-        events: {
-          title: (count) => `Hackathons & Events (${count})`,
-          desc: "Competitive deployments and practical problem-solving events. Click to view all.",
-          modalTitle: "Hackathons, Ideathons & Events"
+        {
+          id: "senac",
+          title: "Senac Qualifications (2)",
+          desc: "Fullstack web development and logic programming certifications from Senac Pernambuco.",
+          image: "/images/certs/Fullstack_senac.png"
         }
-      },
-      isc2List: [
-        {
-          title: "ISC2 Certified in Cybersecurity (CC)",
-          description: "Official credential awarded by the ISC2 Board of Directors (Cert #4079917). Validates fundamental security operations, access controls, network defense, and incident response.",
-          imagePath: "/images/certs/CC_cert_isc2.webp"
-        },
-        { title: "ISC2 CC Domain 1", description: "Security Principles: Foundation of security concepts, risk management, and security controls.", imagePath: "/images/isc2_domain_1_competency.webp" },
-        { title: "ISC2 CC Domain 2", description: "Business Continuity (BC), Disaster Recovery (DR) & Incident Response Concepts.", imagePath: "/images/isc2_domain_2_competency.webp" },
-        { title: "ISC2 CC Domain 3", description: "Access Controls Concepts: Physical and logical access controls and identity management.", imagePath: "/images/isc2_domain_3_competency.webp" },
-        { title: "ISC2 CC Domain 4", description: "Network Security: Computer networking concepts and securing network architectures.", imagePath: "/images/isc2_domain_4_competency.webp" },
-        { title: "ISC2 CC Domain 5", description: "Security Operations: Data security, system hardening, and security policies.", imagePath: "/images/isc2_domain_5_competency.webp" }
-      ],
-      flyrankList: [
-        {
-          title: "FlyRank Recommendation Letter",
-          description: "Official executive letter of recommendation from FlyRank's CEO detailing applied AI contributions, 420h logged, and engineering performance.",
-          imagePath: [
-            "/images/certs/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-1.webp",
-            "/images/certs/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-2.webp"
-          ]
-        },
-        {
-          title: "FlyRank Backend AI Engineering",
-          description: "Certificate of completion for the Backend AI Engineering Internship Program covering FastAPI, Docker Compose, LLM eval suites, and Supabase auth (ID: FR-D11-2A718-D278D).",
-          imagePath: "/images/certs/flyrank-certificate-of-completion-backend-ai-engineering.webp"
-        },
-        {
-          title: "FlyRank AI Fluency",
-          description: "Certificate of completion for applied artificial intelligence fluency and enterprise integration.",
-          imagePath: "/images/certs/flyrank-certificate-of-completion-ai-fluency.png"
-        },
-        {
-          title: "FlyRank Machine Learning",
-          description: "Certificate of completion focused on machine learning deployments.",
-          imagePath: "/images/certs/flyrank-certificate-of-completion_ML.png"
-        }
-      ],
-      anthropicList: [
-        { title: "Anthropic Claude 101", description: "Foundational training covering the Claude ecosystem, prompt engineering, and LLM implementation.", imagePath: "/images/certs/Heitor_Quental_Claude_101_certificate.png" },
-        { title: "Anthropic Claude Code 101", description: "Technical training on implementing and generating code using the Claude API.", imagePath: "/images/certs/Heitor_Quental_Claude_Code_101_certificate.png" },
-        { title: "Anthropic Claude Code in Action", description: "Practical application and deployment of code generated via Anthropic's Claude models.", imagePath: "/images/certs/Heitor_Quental_Claude_Code_in_Action.png" },
-        { title: "Anthropic Claude Platform 101", description: "Comprehensive overview of the Anthropic developer console and platform capabilities.", imagePath: "/images/certs/Heitor_Quental_Claude_Platform_101.png" },
-        { title: "Anthropic: Intro to Agent Skills", description: "Training on equipping AI agents with custom skills and external tool use capabilities.", imagePath: "/images/certs/Heitor_Quental_Introduction_to_agent_skills.png" },
-        { title: "Anthropic: Intro to Claude Cowork", description: "Integrating Claude as a collaborative AI coworker within enterprise workflows.", imagePath: "/images/certs/Heitor_Quental_Introduction_to_Claude_Cowork.png" },
-        { title: "Anthropic: Intro to Subagents", description: "Architecting multi-agent systems and delegating complex tasks to specialized subagents.", imagePath: "/images/certs/Heitor_Quental_Introduction_to_subagents.png" },
-        { title: "Intro to Model Context Protocol", description: "Introduction to architecting secure and scalable Model Context Protocol integrations.", imagePath: "/images/certs/Heitor_Amaral_Introduction_to_model_context_protocol.png" },
-        { title: "Model Context Protocol: Advanced", description: "Advanced implementation of the Model Context Protocol for secure data integration.", imagePath: "/images/certs/Heitor_Quental_Model_Context_Protocol:_Advanced_Topics.png" },
-        { title: "AI Fluency: Capabilities & Limitations", description: "Framework for understanding the realistic capabilities and limitations of modern AI systems.", imagePath: "/images/certs/AI_Fluency:_AI_Capabilities__Limitations.png" },
-        { title: "AI Fluency Certificate", description: "Core certification for foundational AI fluency concepts and operations.", imagePath: "/images/certs/Heitor_Amaral_AI_Fluency_certificate.png" },
-        { title: "AI Fluency for Builders", description: "Targeted frameworks for software engineers and product builders integrating AI.", imagePath: "/images/certs/Heitor_Quental_AI_Fluency_for_builders.png" },
-        { title: "AI Fluency for Educators", description: "Targeted frameworks for deploying AI systems and workflows in educational sectors.", imagePath: "/images/certs/Heitor_Quental_AI_Fluency_for_educators.png" },
-        { title: "AI Fluency for Nonprofits", description: "Targeted frameworks for scaling operational capacity via AI in nonprofit organizations.", imagePath: "/images/certs/Heitor_Quental_AI_Fluency_for_nonprofits.png" },
-        { title: "AI Fluency for Small Businesses", description: "Targeted frameworks for automating and scaling SMB operations with AI tools.", imagePath: "/images/certs/Heitor_Quental_AI_Fluency_for_small_businesses.png" },
-        { title: "AI Fluency for Students", description: "Targeted frameworks for academic acceleration and research assistance using AI.", imagePath: "/images/certs/Heitor_Quental_AI_Fluency_For_Students_certificate.png" },
-        { title: "Teaching the AI Fluency Framework", description: "Methodologies for educating teams and clients on the AI Fluency Framework.", imagePath: "/images/certs/Heitor_Quental_Teaching_the_AI_Fluency_Framework.png" }
-      ],
-      senacList: [
-        { title: "Senac Fullstack Web Development", description: "Comprehensive training in front-end and back-end web development architectures.", imagePath: "/images/certs/Fullstack_senac.png" },
-        { title: "Senac Logic Programming", description: "Foundational training in programming logic and algorithm structuring.", imagePath: "/images/certs/Logic_senac.png" }
-      ],
-      eventList: [
-        { title: "BBTS Hackathon", description: "Participation and project deployment in the Banco do Brasil Tecnologia e Servicos competitive hackathon.", imagePath: "/images/certs/BBTS_hackathon.png" },
-        {
-          title: "Ideathon: Maratona de Ideias",
-          description: "Certificate of participation and winner award voucher for collaborative innovation and solution structuring in the Ideathon marathon.",
-          imagePath: [
-            "/images/Heitor Quental Feitosa Kehrle do Amaral-1.webp",
-            "/images/6992ed8b-82c1-4532-9509-1318af7905c8.webp"
-          ]
-        }
-      ],
-      otherList: [
-        { title: "Microsoft Azure AI Fundamentals", description: "Foundational certification validating knowledge of machine learning and artificial intelligence concepts.", imagePath: "/images/certs/AI-900.png" },
-        { title: "Cambridge C1 Advanced English", description: "High-level English proficiency certification demonstrating language ability for complex professional environments.", imagePath: "/images/certs/C1_english.png" }
       ]
     },
     contact: {
@@ -224,7 +148,7 @@ export const translations = {
     },
     about: {
       title: "Protocolo do Sistema",
-      p1: "Estudante de Sistemas de Informacao na UFRPE (3. periodo, Media Geral 9,10/10, top 3,19% do curso). Meu foco profissional concentra-se na convergencia entre Engenharia de Machine Learning, IA aplicada e seguranca da informacao, construindo arquiteturas auditaveis e seguras sustentadas por benchmarks empiricos.",
+      p1: "Estudante de Sistemas de Informacao na UFRPE (3. periodo, Media Geral 9,10/10, top 3,19% do curso). Meu foco profissional concentra-se na convergencia entre Engenharia de Machine Learning, IA aplicada e seguranca da informacao construindo arquiteturas auditaveis e seguras sustentadas por benchmarks empiricos.",
       p2: "Experiencia pratica em pipelines de ML ponta a ponta e sistemas backend com Python, FastAPI, Pydantic v2, DuckDB, Scikit-Learn, PyTorch, Docker, PostgreSQL, React e Vite, atuando diariamente em ambientes Linux Mint e Kali Linux.",
       p3: "Certificado pelo ISC2 em Certified in Cybersecurity (CC) e Microsoft Azure AI Fundamentals (AI-900), com 17 cursos verificados na Anthropic Academy."
     },
@@ -232,7 +156,7 @@ export const translations = {
       title: "Arquiteturas Implementadas",
       subtitle: "Projetos em producao, pipelines de ML e solucoes defensivas.",
       repoBtn: "Ver Repositorio",
-      expandPrompt: "Clique na imagem para inspecionar a telemetria",
+      expandHint: "Clique para inspecionar a telemetria",
       items: [
         {
           title: "Endpoint Arbiter",
@@ -284,8 +208,8 @@ export const translations = {
       lastUpdated: "Ultima Atualizacao: 6 de Outubro de 2026",
       tasks: [
         {
-          category: "Pesquisa & Desenvolvimento",
-          title: "Endpoint Arbiter (Fase 2 & 3)",
+          category: "Pesquisa e Desenvolvimento",
+          title: "Endpoint Arbiter (Fase 2 e 3)",
           detail: "Desenvolvimento da Fase 2 do Endpoint Arbiter, implementando motor de regras Sigma, calibracao do classificador de ML para alertas de SOC e preparacao de benchmark publico."
         },
         {
@@ -305,117 +229,41 @@ export const translations = {
         },
         {
           category: "Engenharia Aplicada",
-          title: "Sistemas Event-Driven & Multiagentes",
+          title: "Sistemas Event-Driven e Multiagentes",
           detail: "Desenvolvimento de fluxos assincronos e orquestracao de microsservicos com FastAPI, Inngest, DuckDB e Model Context Protocol (MCP) para execucao robusta e com controle de taxas."
         }
       ]
     },
     certs: {
-      title: "Credenciais & Validacao",
+      title: "Credenciais e Validacao",
       subtitle: "Proficiencias comprovadas, formacoes concluidas e conquistas academicas.",
       modalClose: "FECHAR",
-      modalSubtitle: (count) => `${count} certificacoes e implementacoes verificadas.`,
-      groups: {
-        isc2: {
-          title: (count) => `Certificacao ISC2 (${count})`,
-          desc: "Credencial oficial Certified in Cybersecurity (CC) e competencias nos 5 dominios essenciais de seguranca da informacao e governanca. Clique para ver todos.",
-          modalTitle: "Credenciais ISC2 de Ciberseguranca"
+      viewBtn: "Ver Credenciais",
+      groups: [
+        {
+          id: "flyrank",
+          title: "Estagio FlyRank AI (4)",
+          desc: "Carta executiva de recomendacao, certificado Backend AI Engineering, AI Fluency e conclusao da trilha de Machine Learning.",
+          image: "/images/certs/flyrank-certificate-of-completion-backend-ai-engineering.webp"
         },
-        flyrank: {
-          title: (count) => `Estagio FlyRank AI (${count})`,
-          desc: "Carta executiva de recomendacao, certificado em Backend AI Engineering e documentos de conclusao da trilha de Machine Learning. Clique para ver todos.",
-          modalTitle: "Documentos e Certificados: FlyRank AI"
+        {
+          id: "isc2",
+          title: "Certificacao ISC2 CC (6)",
+          desc: "Credencial oficial CC (#4079917) e 5 certificados de competencia em controle de acesso, redes e operacoes.",
+          image: "/images/certs/CC_cert_isc2.webp"
         },
-        anthropic: {
-          title: (count) => `Anthropic Academy (${count})`,
-          desc: "Colecao de 17 certificacoes verificadas da Anthropic cobrindo o ecossistema Claude, MCP, agent skills, subagentes e AI Fluency. Clique para ver todos.",
-          modalTitle: "Colecao Anthropic"
+        {
+          id: "anthropic",
+          title: "Colecao Anthropic (17)",
+          desc: "17 certificacoes cobrindo o ecossistema Claude, integracao MCP, agent skills e fluencia em IA.",
+          image: "/images/certs/Heitor_Quental_Claude_101_certificate.png"
         },
-        senac: {
-          title: (count) => `Certificacoes Senac (${count})`,
-          desc: "Formacoes em desenvolvimento de software cobrindo arquiteturas front-end, back-end e logica de programacao. Clique para ver todos.",
-          modalTitle: "Qualificacoes Senac"
-        },
-        events: {
-          title: (count) => `Hackathons & Eventos (${count})`,
-          desc: "Projetos competitivos e resolucao pratica de problemas em eventos tecnologicos. Clique para ver todos.",
-          modalTitle: "Hackathons, Ideathons & Eventos"
+        {
+          id: "senac",
+          title: "Qualificacoes Senac (2)",
+          desc: "Formacoes profissionais em desenvolvimento fullstack e logica de programacao no Senac Pernambuco.",
+          image: "/images/certs/Fullstack_senac.png"
         }
-      },
-      isc2List: [
-        {
-          title: "ISC2 Certified in Cybersecurity (CC)",
-          description: "Certificacao profissional oficial emitida pelo Conselho Diretor do ISC2 (Certificado n. 4079917), validando principios de seguranca, controle de acesso e defesa cibernetica.",
-          imagePath: "/images/certs/CC_cert_isc2.webp"
-        },
-        { title: "ISC2 CC Dominio 1", description: "Principios de Seguranca: Fundamentos de seguranca, gestao de riscos e controles de seguranca.", imagePath: "/images/isc2_domain_1_competency.webp" },
-        { title: "ISC2 CC Dominio 2", description: "Continuidade de Negocios (BC), Recuperacao de Desastres (DR) e Conceitos de Resposta a Incidentes.", imagePath: "/images/isc2_domain_2_competency.webp" },
-        { title: "ISC2 CC Dominio 3", description: "Conceitos de Controle de Acesso: Controles de acesso fisico e logico e gestao de identidade.", imagePath: "/images/isc2_domain_3_competency.webp" },
-        { title: "ISC2 CC Dominio 4", description: "Seguranca de Redes: Conceitos de redes de computadores e protecao de arquiteturas de rede.", imagePath: "/images/isc2_domain_4_competency.webp" },
-        { title: "ISC2 CC Dominio 5", description: "Operacoes de Seguranca: Seguranca de dados, hardening de sistemas e politicas de seguranca.", imagePath: "/images/isc2_domain_5_competency.webp" }
-      ],
-      flyrankList: [
-        {
-          title: "Carta de Recomendacao FlyRank",
-          description: "Carta executiva de recomendacao do CEO da FlyRank detalhando contribuicoes em inteligencia artificial aplicada, 420h registradas e desempenho de engenharia.",
-          imagePath: [
-            "/images/certs/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-1.webp",
-            "/images/certs/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-2.webp"
-          ]
-        },
-        {
-          title: "FlyRank Backend AI Engineering",
-          description: "Certificado de conclusao da trilha Backend AI Engineering cobrindo FastAPI, Docker Compose, triagem com LLM, evals e autenticacao JWT (ID: FR-D11-2A718-D278D).",
-          imagePath: "/images/certs/flyrank-certificate-of-completion-backend-ai-engineering.webp"
-        },
-        {
-          title: "FlyRank AI Fluency",
-          description: "Certificado de conclusao em fluencia de inteligencia artificial aplicada e integracao empresarial.",
-          imagePath: "/images/certs/flyrank-certificate-of-completion-ai-fluency.png"
-        },
-        {
-          title: "FlyRank Machine Learning",
-          description: "Certificado de conclusao focado em implementacao de modelos de machine learning.",
-          imagePath: "/images/certs/flyrank-certificate-of-completion_ML.png"
-        }
-      ],
-      anthropicList: [
-        { title: "Anthropic Claude 101", description: "Treinamento fundamental cobrindo o ecossistema Claude, engenharia de prompt e implementacao de LLMs.", imagePath: "/images/certs/Heitor_Quental_Claude_101_certificate.png" },
-        { title: "Anthropic Claude Code 101", description: "Treinamento tecnico sobre implementacao e geracao de codigo utilizando a API do Claude.", imagePath: "/images/certs/Heitor_Quental_Claude_Code_101_certificate.png" },
-        { title: "Anthropic Claude Code in Action", description: "Aplicacao pratica e implantacao de codigos gerados atraves dos modelos Claude da Anthropic.", imagePath: "/images/certs/Heitor_Quental_Claude_Code_in_Action.png" },
-        { title: "Anthropic Claude Platform 101", description: "Visao abrangente do console de desenvolvedores e recursos da plataforma da Anthropic.", imagePath: "/images/certs/Heitor_Quental_Claude_Platform_101.png" },
-        { title: "Anthropic: Intro to Agent Skills", description: "Capacitacao em habilidades customizadas e ferramentas externas para agentes autonomos de IA.", imagePath: "/images/certs/Heitor_Quental_Introduction_to_agent_skills.png" },
-        { title: "Anthropic: Intro to Claude Cowork", description: "Integracao do Claude como parceiro cognitivo em fluxos de trabalho empresariais.", imagePath: "/images/certs/Heitor_Quental_Introduction_to_Claude_Cowork.png" },
-        { title: "Anthropic: Intro to Subagents", description: "Arquitetura de sistemas multiagentes delegando tarefas complexas para subagentes especializados.", imagePath: "/images/certs/Heitor_Quental_Introduction_to_subagents.png" },
-        { title: "Intro to Model Context Protocol", description: "Introducao a arquitetura de integracoes seguras e escalaveis com Model Context Protocol.", imagePath: "/images/certs/Heitor_Amaral_Introduction_to_model_context_protocol.png" },
-        { title: "Model Context Protocol: Advanced", description: "Implementacao avancada do Model Context Protocol para conexao segura com fontes de dados.", imagePath: "/images/certs/Heitor_Quental_Model_Context_Protocol:_Advanced_Topics.png" },
-        { title: "AI Fluency: Capabilities & Limitations", description: "Estrutura para compreender as capacidades realistas e limitacoes de sistemas modernos de IA.", imagePath: "/images/certs/AI_Fluency:_AI_Capabilities__Limitations.png" },
-        { title: "AI Fluency Certificate", description: "Certificacao central cobrindo conceitos fundamentais e operacionais de fluencia em IA.", imagePath: "/images/certs/Heitor_Amaral_AI_Fluency_certificate.png" },
-        { title: "AI Fluency for Builders", description: "Diretrizes praticas voltadas para engenheiros de software e desenvolvedores de produtos com IA.", imagePath: "/images/certs/Heitor_Quental_AI_Fluency_for_builders.png" },
-        { title: "AI Fluency for Educators", description: "Metodologias de implantacao de fluxos de trabalho e ferramentas de IA no setor educacional.", imagePath: "/images/certs/Heitor_Quental_AI_Fluency_for_educators.png" },
-        { title: "AI Fluency for Nonprofits", description: "Estrategias de expansao de capacidade operacional via IA para organizacoes sem fins lucrativos.", imagePath: "/images/certs/Heitor_Quental_AI_Fluency_for_nonprofits.png" },
-        { title: "AI Fluency for Small Businesses", description: "Capacitacao para automacao e escalabilidade de processos empresariais com IA.", imagePath: "/images/certs/Heitor_Quental_AI_Fluency_for_small_businesses.png" },
-        { title: "AI Fluency for Students", description: "Uso estrategico de IA generativa para pesquisa academica e aceleracao de aprendizagem.", imagePath: "/images/certs/Heitor_Quental_AI_Fluency_For_Students_certificate.png" },
-        { title: "Teaching the AI Fluency Framework", description: "Metodologias de capacitacao de equipes e clientes no framework de AI Fluency.", imagePath: "/images/certs/Heitor_Quental_Teaching_the_AI_Fluency_Framework.png" }
-      ],
-      senacList: [
-        { title: "Senac Fullstack Web Development", description: "Formacao completa em arquiteturas web front-end e back-end.", imagePath: "/images/certs/Fullstack_senac.png" },
-        { title: "Senac Logica de Programacao", description: "Fundamentos de logica algoritmica e estruturas de dados essenciais.", imagePath: "/images/certs/Logic_senac.png" }
-      ],
-      eventList: [
-        { title: "Hackathon'Play BBTS", description: "Participacao e desenvolvimento de projeto competitivo no hackathon do BB Tecnologia e Servicos.", imagePath: "/images/certs/BBTS_hackathon.png" },
-        {
-          title: "Ideathon: Maratona de Ideias",
-          description: "Certificado de participacao e premiacao pelo projeto cultconnect / Canto do Bem no congresso Sesc.",
-          imagePath: [
-            "/images/Heitor Quental Feitosa Kehrle do Amaral-1.webp",
-            "/images/6992ed8b-82c1-4532-9509-1318af7905c8.webp"
-          ]
-        }
-      ],
-      otherList: [
-        { title: "Microsoft Azure AI Fundamentals (AI-900)", description: "Certificacao internacional validando conceitos de inteligencia artificial e servicos cognitivos em nuvem.", imagePath: "/images/certs/AI-900.png" },
-        { title: "Ingles C1 Avancado (Cultura Inglesa)", description: "Proficiencia linguistica em nivel avancado C1 para comunicacao tecnica e ambientes globais.", imagePath: "/images/certs/C1_english.png" }
       ]
     },
     contact: {
