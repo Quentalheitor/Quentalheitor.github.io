@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import './index.css';
 import { LanguageProvider, useLanguage } from './LanguageContext';
 
 function PortfolioMain() {
   const { lang, setLanguage, t } = useLanguage();
-  const [activeImage, setActiveImage] = useState(null);
+  const [activeModal, setActiveModal] = useState(null);
 
-  // Close lightbox on Escape key and manage body scroll
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') {
-        setActiveImage(null);
+        setActiveModal(null);
       }
     };
-    if (activeImage) {
+    if (activeModal) {
       window.addEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'hidden';
     } else {
@@ -22,62 +22,41 @@ function PortfolioMain() {
       window.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = '';
     };
-  }, [activeImage]);
+  }, [activeModal]);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans relative selection:bg-amber-500 selection:text-slate-950">
-      {/* Structural Guidelines from index.css */}
-      <div className="geometric-line horizontal-line top-20" />
-      <div className="geometric-line horizontal-line top-1/2" />
+    <div className="site-wrapper">
+      <div className="geometric-line horizontal-line" style={{ top: '80px' }} />
+      <div className="geometric-line horizontal-line" style={{ top: '55%' }} />
 
-      {/* Sticky Header / Navigation */}
-      <header className="sticky top-0 z-40 bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80 px-6 py-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <span className="w-2.5 h-2.5 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b]" />
-            <span className="font-mono text-sm font-bold text-slate-200 tracking-wider">
-              HEITOR.QUENTAL
-            </span>
+      {/* Navigation Header */}
+      <header className="site-header">
+        <div className="nav-row">
+          <div className="brand-badge">
+            <span className="brand-dot" />
+            <span>HEITOR.QUENTAL</span>
           </div>
 
-          <nav className="flex items-center gap-6 text-sm font-medium text-slate-400">
-            <a href="#about" className="hover:text-amber-400 transition-colors hidden sm:inline">
-              Protocol
-            </a>
-            <a href="#projects" className="text-slate-100 hover:text-amber-400 transition-colors">
-              Architecture
-            </a>
-            <a href="#operations" className="hover:text-amber-400 transition-colors hidden md:inline">
-              Operations
-            </a>
-            <a href="#certs" className="hover:text-amber-400 transition-colors hidden md:inline">
-              Credentials
-            </a>
-            <a href="#contact" className="hover:text-amber-400 transition-colors">
-              Connect
-            </a>
+          <nav className="nav-links">
+            <a href="#about" className="nav-link">Protocol</a>
+            <a href="#projects" className="nav-link" style={{ color: 'var(--text-main)' }}>Architecture</a>
+            <a href="#operations" className="nav-link">Operations</a>
+            <a href="#certs" className="nav-link">Credentials</a>
+            <a href="#contact" className="nav-link">Connect</a>
 
             {/* Language Selector */}
-            <div className="flex items-center gap-1 bg-slate-900 border border-slate-800 rounded p-1 font-mono text-xs">
+            <div className="lang-switch">
               <button
                 type="button"
                 onClick={() => setLanguage('en')}
-                className={`px-2 py-0.5 rounded transition-colors ${
-                  lang === 'en'
-                    ? 'bg-amber-500 text-slate-950 font-bold'
-                    : 'text-slate-400 hover:text-slate-200'
-                }`}
+                className={`lang-btn ${lang === 'en' ? 'active' : ''}`}
               >
                 EN
               </button>
               <button
                 type="button"
                 onClick={() => setLanguage('pt')}
-                className={`px-2 py-0.5 rounded transition-colors ${
-                  lang === 'pt'
-                    ? 'bg-amber-500 text-slate-950 font-bold'
-                    : 'text-slate-400 hover:text-slate-200'
-                }`}
+                className={`lang-btn ${lang === 'pt' ? 'active' : ''}`}
               >
                 PT
               </button>
@@ -87,250 +66,221 @@ function PortfolioMain() {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-6 max-w-7xl mx-auto relative z-10">
-        <div className="max-w-3xl">
-          <p className="text-xs font-mono uppercase tracking-widest text-amber-400 mb-4">
-            AI Engineering & Cybersecurity Architecture
-          </p>
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-50 leading-tight mb-6">
-            Heitor Quental Feitoza Kehrle do Amaral
-          </h1>
-          <p className="text-lg text-slate-400 leading-relaxed mb-8">
-            {t.hero.subtitle}
-          </p>
-          <div className="flex items-center gap-4">
-            <a
-              href="#projects"
-              className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider px-6 py-3 rounded transition-colors"
-            >
-              {t.hero.cta}
-            </a>
-            <a
-              href="https://github.com/Quentalheitor"
-              target="_blank"
-              rel="noreferrer"
-              className="border border-slate-800 hover:border-slate-700 bg-slate-900 text-slate-300 font-mono text-xs px-5 py-3 rounded transition-colors"
-            >
-              GitHub &rarr;
-            </a>
+      <section className="hero-section">
+        <div className="content-container">
+          <div className="hero-box">
+            <div className="eyebrow-pill">
+              <span>{t.hero.eyebrow}</span>
+            </div>
+            <h1 className="hero-title">
+              Heitor Quental Feitoza Kehrle do Amaral
+            </h1>
+            <p className="hero-desc">
+              {t.hero.subtitle}
+            </p>
+            <div className="hero-actions">
+              <a href="#projects" className="btn-primary">
+                <span>{t.hero.cta}</span>
+                <span>&rarr;</span>
+              </a>
+              <a
+                href="https://github.com/Quentalheitor"
+                target="_blank"
+                rel="noreferrer"
+                className="btn-secondary"
+              >
+                <span>{t.hero.githubBtn} &rarr;</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 px-6 max-w-7xl mx-auto border-t border-slate-900 relative z-10">
-        <h2 className="text-xs font-mono uppercase tracking-widest text-amber-400 mb-6">
-          {t.about.title}
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-slate-400 leading-relaxed">
-          <p>{t.about.p1}</p>
-          <p>{t.about.p2}</p>
-          <p>{t.about.p3}</p>
+      <section id="about" className="section-block">
+        <div className="content-container">
+          <div className="section-head">
+            <div className="section-eyebrow">{t.about.title}</div>
+          </div>
+          <div className="protocol-grid">
+            <div className="protocol-card"><p>{t.about.p1}</p></div>
+            <div className="protocol-card"><p>{t.about.p2}</p></div>
+            <div className="protocol-card"><p>{t.about.p3}</p></div>
+          </div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-6 max-w-7xl mx-auto relative z-10 border-t border-slate-900">
-        <div className="mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono font-semibold uppercase tracking-wider mb-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b]" />
-            <span>EMPIRICAL BENCHMARKS</span>
+      <section id="projects" className="section-block">
+        <div className="content-container">
+          <div className="section-head">
+            <div className="section-eyebrow">{t.projects.tag}</div>
+            <h2 className="section-heading">{t.projects.title}</h2>
+            <p className="section-sub">{t.projects.subtitle}</p>
           </div>
-          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-100">
-            {t.projects.title}
-          </h2>
-          <p className="text-slate-400 text-sm md:text-base mt-2 max-w-2xl">
-            {t.projects.subtitle}
-          </p>
-        </div>
 
-        {/* 2-Column Responsive Card Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {t.projects.items.map((project, index) => (
-            <article
-              key={index}
-              className="flex flex-col bg-slate-900/90 rounded-xl border border-slate-800 hover:border-amber-500/40 transition-all duration-300 overflow-hidden shadow-xl"
-            >
-              {/* Telemetry Screenshot Container with object-top framing */}
-              <div
-                onClick={() => setActiveImage(project)}
-                className="relative w-full aspect-[16/10] bg-slate-950 border-b border-slate-800/80 overflow-hidden cursor-zoom-in group"
-              >
-                <img
-                  src={project.imagePath}
-                  alt={project.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-end justify-between p-4">
-                  <span className="text-xs font-mono text-amber-400 bg-slate-950/90 px-2.5 py-1 rounded border border-amber-500/30">
-                    {t.projects.expandHint}
-                  </span>
-                  <span className="text-xs font-mono text-slate-300 bg-slate-900/90 px-2 py-1 rounded">
-                    [+] 1:1 Lightbox
-                  </span>
+          <div className="projects-grid">
+            {t.projects.items.map((project, idx) => (
+              <article key={idx} className="project-card">
+                {/* 16:10 Ratio Container with object-top framing */}
+                <div
+                  className="project-thumb"
+                  onClick={() => setActiveModal({ title: project.title, imagePath: project.imagePath })}
+                >
+                  <img
+                    src={project.imagePath}
+                    alt={project.title}
+                    loading="lazy"
+                  />
+                  <div className="project-overlay">
+                    <span className="overlay-tag">{t.projects.inspectHint}</span>
+                    <span className="overlay-zoom">[+] 1:1 Lightbox</span>
+                  </div>
                 </div>
-              </div>
 
-              {/* Project Card Meta */}
-              <div className="p-6 flex flex-col flex-grow justify-between">
-                <div>
-                  <h3 className="text-xl font-bold text-slate-100 tracking-tight mb-2">
-                    {project.title}
-                  </h3>
-
-                  <div className="text-xs font-mono font-semibold text-amber-400 tracking-wide mb-3">
-                    {project.stack}
+                <div className="project-body">
+                  <div>
+                    <h3 className="project-title">{project.title}</h3>
+                    <div className="project-stack">{project.stack}</div>
+                    <p className="project-desc">{project.description}</p>
                   </div>
 
-                  <p className="text-slate-300 text-sm leading-relaxed mb-6">
-                    {project.description}
-                  </p>
+                  <div className="project-foot">
+                    <a
+                      href={project.repoLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-btn"
+                    >
+                      <span>{t.projects.repoBtn}</span>
+                      <span>&rarr;</span>
+                    </a>
+                    <span className="project-id">SYS-0{idx + 1}</span>
+                  </div>
                 </div>
-
-                <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between">
-                  <a
-                    href={project.repoLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-950 bg-amber-500 hover:bg-amber-400 px-4 py-2 rounded transition-colors"
-                  >
-                    <span>{t.projects.repoBtn}</span>
-                    <span aria-hidden="true">&rarr;</span>
-                  </a>
-
-                  <span className="text-xs font-mono text-slate-500">
-                    SYS-0{index + 1}
-                  </span>
-                </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Operations Section */}
-      <section id="operations" className="py-16 px-6 max-w-7xl mx-auto border-t border-slate-900 relative z-10">
-        <div className="flex items-center justify-between mb-8">
-          <div>
-            <h2 className="text-xs font-mono uppercase tracking-widest text-amber-400 mb-1">
-              {t.operations.title}
-            </h2>
-            <p className="text-slate-400 text-sm">{t.operations.subtitle}</p>
-          </div>
-          <span className="text-xs font-mono text-slate-500">{t.operations.lastUpdated}</span>
-        </div>
-
-        <div className="space-y-4">
-          {t.operations.tasks.map((task, idx) => (
-            <div
-              key={idx}
-              className="bg-slate-900/60 border border-slate-800/80 rounded-lg p-5 flex flex-col md:flex-row md:items-center justify-between gap-4"
-            >
+      <section id="operations" className="section-block">
+        <div className="content-container">
+          <div className="section-head">
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
               <div>
-                <span className="text-xs font-mono text-amber-400 block mb-1">{task.category}</span>
-                <h3 className="text-base font-bold text-slate-200">{task.title}</h3>
-                <p className="text-sm text-slate-400 mt-1 max-w-3xl">{task.detail}</p>
+                <div className="section-eyebrow">{t.operations.title}</div>
+                <p className="section-sub">{t.operations.subtitle}</p>
               </div>
+              <span style={{ fontFamily: 'monospace', fontSize: '0.75rem', color: 'var(--text-dim)' }}>
+                {t.operations.lastUpdated}
+              </span>
             </div>
-          ))}
+          </div>
+
+          <div className="ops-list">
+            {t.operations.tasks.map((task, idx) => (
+              <div key={idx} className="op-item">
+                <div className="op-cat">{task.category}</div>
+                <h3 className="op-title">{task.title}</h3>
+                <p className="op-detail">{task.detail}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Credentials and Certifications Section */}
-      <section id="certs" className="py-16 px-6 max-w-7xl mx-auto border-t border-slate-900 relative z-10">
-        <div className="mb-8">
-          <h2 className="text-xs font-mono uppercase tracking-widest text-amber-400 mb-1">
-            {t.certs.title}
-          </h2>
-          <p className="text-slate-400 text-sm">{t.certs.subtitle}</p>
-        </div>
+      {/* Credentials Section */}
+      <section id="certs" className="section-block">
+        <div className="content-container">
+          <div className="section-head">
+            <div className="section-eyebrow">{t.certs.title}</div>
+            <p className="section-sub">{t.certs.subtitle}</p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {t.certs.groups.map((group, idx) => (
-            <div
-              key={idx}
-              onClick={() => setActiveImage({ title: group.title, imagePath: group.image })}
-              className="bg-slate-900/70 border border-slate-800/80 rounded-lg p-5 hover:border-amber-500/40 transition-colors cursor-pointer group flex flex-col justify-between"
-            >
-              <div>
-                <h3 className="text-sm font-bold text-slate-100 group-hover:text-amber-400 transition-colors mb-2">
-                  {group.title}
-                </h3>
-                <p className="text-xs text-slate-400 leading-relaxed">{group.desc}</p>
+          <div className="certs-grid">
+            {t.certs.groups.map((group, idx) => (
+              <div
+                key={idx}
+                className="cert-card"
+                onClick={() => setActiveModal({ title: group.title, imagePath: group.imagePath })}
+              >
+                <div>
+                  <h3 className="cert-title">{group.title}</h3>
+                  <p className="cert-desc">{group.desc}</p>
+                </div>
+                <div className="cert-link">
+                  <span>{t.certs.viewBtn} &rarr;</span>
+                </div>
               </div>
-              <span className="mt-4 text-xs font-mono text-amber-500 inline-flex items-center gap-1">
-                {t.certs.viewBtn} &rarr;
-              </span>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6 max-w-3xl mx-auto border-t border-slate-900 relative z-10">
-        <h2 className="text-xs font-mono uppercase tracking-widest text-amber-400 mb-2">
-          {t.contact.title}
-        </h2>
-        <p className="text-sm text-slate-400 mb-8">{t.contact.subtitle}</p>
+      <section id="contact" className="section-block">
+        <div className="content-container">
+          <div className="contact-container">
+            <div className="section-head" style={{ textAlign: 'center' }}>
+              <div className="section-eyebrow">{t.contact.title}</div>
+              <p className="section-sub">{t.contact.subtitle}</p>
+            </div>
 
-        <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
-          <input
-            type="text"
-            placeholder={t.contact.namePlaceholder}
-            className="contact-input rounded-lg"
-          />
-          <input
-            type="email"
-            placeholder={t.contact.emailPlaceholder}
-            className="contact-input rounded-lg"
-          />
-          <textarea
-            rows="4"
-            placeholder={t.contact.messagePlaceholder}
-            className="contact-input rounded-lg"
-          />
-          <button
-            type="submit"
-            className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider px-6 py-3 rounded transition-colors"
-          >
-            {t.contact.submitBtn}
-          </button>
-        </form>
+            <form onSubmit={(e) => e.preventDefault()}>
+              <input
+                type="text"
+                placeholder={t.contact.namePlaceholder}
+                className="contact-input"
+              />
+              <input
+                type="email"
+                placeholder={t.contact.emailPlaceholder}
+                className="contact-input"
+              />
+              <textarea
+                placeholder={t.contact.messagePlaceholder}
+                className="contact-input"
+              />
+              <button type="submit" className="btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
+                {t.contact.submitBtn}
+              </button>
+            </form>
+          </div>
+        </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-slate-900 py-8 px-6 text-center text-xs font-mono text-slate-600">
-        <p>{t.footer.builtBy}</p>
+      <footer className="site-footer">
+        <div className="content-container">
+          <p>{t.footer.builtBy}</p>
+        </div>
       </footer>
 
-      {/* Lightbox Modal (Bound to .lightbox-img from index.css) */}
-      {activeImage && (
+      {/* Full-Screen Lightbox Modal */}
+      {activeModal && (
         <div
           role="dialog"
           aria-modal="true"
-          onClick={() => setActiveImage(null)}
-          className="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex flex-col items-center justify-center p-4 md:p-8 cursor-zoom-out"
+          className="lightbox-backdrop"
+          onClick={() => setActiveModal(null)}
         >
-          <div
-            onClick={(e) => e.stopPropagation()}
-            className="relative flex flex-col items-center max-w-full cursor-default"
-          >
-            <div className="w-full flex items-center justify-between pb-3 text-xs font-mono text-slate-300">
-              <span className="text-amber-400 font-bold">{activeImage.title}</span>
+          <div className="lightbox-box" onClick={(e) => e.stopPropagation()}>
+            <div className="lightbox-bar">
+              <span style={{ color: 'var(--amber-light)', fontWeight: 700 }}>{activeModal.title}</span>
               <button
                 type="button"
-                onClick={() => setActiveImage(null)}
-                className="px-2.5 py-1 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded border border-slate-700 transition-colors"
+                className="lightbox-close"
+                onClick={() => setActiveModal(null)}
               >
                 ESC / Close
               </button>
             </div>
-
             <img
-              src={activeImage.imagePath}
-              alt={activeImage.title}
-              className="lightbox-img rounded-lg"
+              src={activeModal.imagePath}
+              alt={activeModal.title}
+              className="lightbox-img"
             />
           </div>
         </div>
