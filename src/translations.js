@@ -126,7 +126,7 @@ export const translations = {
       isc2List: [
         { 
           title: "ISC2 Certified in Cybersecurity (CC)", 
-          description: "Official credential awarded by the ISC2 Board of Directors (Cert #4079917). Validates fundamental security operations, risk management, and network defense principles.", 
+          description: "Official credential awarded by the ISC2 Board of Directors (Cert #4079917). Validates fundamental security operations, access controls, network defense, and incident response.", 
           imagePath: "/images/certs/CC_cert_isc2.webp" 
         },
         { title: "ISC2 CC Domain 1", description: "Security Principles: Foundation of security concepts, risk management, and security controls.", imagePath: "/images/isc2_domain_1_competency.webp" },
@@ -137,27 +137,27 @@ export const translations = {
       ],
       flyrankList: [
         {
-          title: "Executive Recommendation Letter",
-          description: "Formal recommendation issued by Alen Malkoc, CEO of FlyRank AI, highlighting 420h of work, end-to-end ML leadership, and 10x engineering execution (Verifier ID: FR-D10-6D83E-00DB2).",
+          title: "FlyRank Recommendation Letter",
+          description: "Official executive letter of recommendation from FlyRank's CEO detailing applied AI contributions, 420h logged, and engineering performance.",
           imagePath: [
             "/images/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-1.webp",
             "/images/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-2.webp"
           ]
         },
         {
-          title: "Backend AI Engineering Certificate",
-          description: "Official Certificate of Completion for the Backend AI Engineering track covering FastAPI, Docker Compose, LLM triage routes, eval benchmarks, and Supabase JWT (ID: FR-D11-2A718-D278D).",
+          title: "FlyRank Backend AI Engineering",
+          description: "Certificate of completion for the Backend AI Engineering Internship Program covering FastAPI, Docker Compose, LLM eval suites, and Supabase auth (ID: FR-D11-2A718-D278D).",
           imagePath: "/images/certs/flyrank-certificate-of-completion-backend-ai-engineering.webp"
         },
         {
-          title: "Machine Learning Engineering Track",
-          description: "Curriculum completion across 79M Parquet records, Group Shuffle Split, ROC-AUC evaluation, and production data contracts.",
-          imagePath: "/images/certs/flyrank-certificate-of-completion_ML.png"
+          title: "FlyRank AI Fluency",
+          description: "Certificate of completion for applied artificial intelligence fluency and enterprise integration.",
+          imagePath: "/images/certs/flyrank-certificate-of-completion-ai-fluency.png"
         },
         {
-          title: "AI Fluency Specialization",
-          description: "Credential validating practical applied AI workflows, prompt ladders, and business impact roadmaps.",
-          imagePath: "/images/certs/flyrank-certificate-of-completion-ai-fluency.png"
+          title: "FlyRank Machine Learning",
+          description: "Certificate of completion focused on machine learning deployments.",
+          imagePath: "/images/certs/flyrank-certificate-of-completion_ML.png"
         }
       ],
       anthropicList: [
@@ -344,38 +344,38 @@ export const translations = {
       isc2List: [
         { 
           title: "ISC2 Certified in Cybersecurity (CC)", 
-          description: "Certificação profissional emitida pelo Conselho Diretor do ISC2 (Certificado nº 4079917). Valida princípios operacionais de segurança, controles de acesso e resposta a incidentes.", 
+          description: "Certificação profissional oficial emitida pelo Conselho Diretor do ISC2 (Certificado nº 4079917), validando princípios de segurança, controle de acesso e defesa cibernética.", 
           imagePath: "/images/certs/CC_cert_isc2.webp" 
         },
-        { title: "ISC2 CC Domínio 1", description: "Princípios de Segurança: Conceitos fundamentais de segurança, gestão de riscos e controles.", imagePath: "/images/isc2_domain_1_competency.webp" },
-        { title: "ISC2 CC Domínio 2", description: "Continuidade de Negócios (BC), Recuperação de Desastres (DR) e Resposta a Incidentes.", imagePath: "/images/isc2_domain_2_competency.webp" },
-        { title: "ISC2 CC Domínio 3", description: "Conceitos de Controle de Acesso: Controles físicos, lógicos e gerenciamento de identidade.", imagePath: "/images/isc2_domain_3_competency.webp" },
-        { title: "ISC2 CC Domínio 4", description: "Segurança de Redes: Conceitos de redes de computadores e defesa de infraestruturas.", imagePath: "/images/isc2_domain_4_competency.webp" },
-        { title: "ISC2 CC Domínio 5", description: "Operações de Segurança: Proteção de dados, endurecimento de sistemas e políticas de segurança.", imagePath: "/images/isc2_domain_5_competency.webp" }
+        { title: "ISC2 CC Domínio 1", description: "Princípios de Segurança: Fundamentos de segurança, gestão de riscos e controles de segurança.", imagePath: "/images/isc2_domain_1_competency.webp" },
+        { title: "ISC2 CC Domínio 2", description: "Continuidade de Negócios (BC), Recuperação de Desastres (DR) e Conceitos de Resposta a Incidentes.", imagePath: "/images/isc2_domain_2_competency.webp" },
+        { title: "ISC2 CC Domínio 3", description: "Conceitos de Controle de Acesso: Controles de acesso físico e lógico e gestão de identidade.", imagePath: "/images/isc2_domain_3_competency.webp" },
+        { title: "ISC2 CC Domínio 4", description: "Segurança de Redes: Conceitos de redes de computadores e proteção de arquiteturas de rede.", imagePath: "/images/isc2_domain_4_competency.webp" },
+        { title: "ISC2 CC Domínio 5", description: "Operações de Segurança: Segurança de dados, hardening de sistemas e políticas de segurança.", imagePath: "/images/isc2_domain_5_competency.webp" }
       ],
       flyrankList: [
         {
-          title: "Carta de Recomendação Executiva",
-          description: "Carta oficial emitida pelo CEO Alen Malkoc detalhando 420h de atuação, liderança técnica em ML e resolução 10x de engenharia (Código de Verificação: FR-D10-6D83E-00DB2).",
+          title: "Carta de Recomendação FlyRank",
+          description: "Carta executiva de recomendação do CEO da FlyRank detalhando contribuições em inteligência artificial aplicada, 420h registradas e desempenho de engenharia.",
           imagePath: [
             "/images/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-1.webp",
             "/images/flyrank-recommendation-letter-2cc4c222-cfa1-4a6d-9167-0d79d060c49c-2.webp"
           ]
         },
         {
-          title: "Backend AI Engineering Certificate",
-          description: "Certificado de conclusão oficial da trilha Backend AI Engineering cobrindo FastAPI, Docker Compose, triagem com LLM, evals e Supabase JWT (ID: FR-D11-2A718-D278D).",
+          title: "FlyRank Backend AI Engineering",
+          description: "Certificado de conclusão da trilha Backend AI Engineering cobrindo FastAPI, Docker Compose, triagem com LLM, evals e autenticação JWT (ID: FR-D11-2A718-D278D).",
           imagePath: "/images/certs/flyrank-certificate-of-completion-backend-ai-engineering.webp"
         },
         {
-          title: "Trilha de Engenharia de Machine Learning",
-          description: "Conclusão de tarefas de ML sobre 79M de registros em Parquet, Group Shuffle Split, auditoria de data leakage e contratos de dados.",
-          imagePath: "/images/certs/flyrank-certificate-of-completion_ML.png"
+          title: "FlyRank AI Fluency",
+          description: "Certificado de conclusão em fluência de inteligência artificial aplicada e integração empresarial.",
+          imagePath: "/images/certs/flyrank-certificate-of-completion-ai-fluency.png"
         },
         {
-          title: "Especialização em AI Fluency",
-          description: "Certificado validando fluxos práticos de IA generativa, prompt engineering avançado e projetos de impacto corporativo.",
-          imagePath: "/images/certs/flyrank-certificate-of-completion-ai-fluency.png"
+          title: "FlyRank Machine Learning",
+          description: "Certificado de conclusão focado em implementação de modelos de machine learning.",
+          imagePath: "/images/certs/flyrank-certificate-of-completion_ML.png"
         }
       ],
       anthropicList: [
