@@ -1,8 +1,10 @@
 export const translations = {
   en: {
     hero: {
+      eyebrow: "AI Engineering & Cybersecurity Architecture",
       subtitle: "Engineering AI pipelines, ML systems, and secure backend architectures.",
-      cta: "Initialize Protocol"
+      cta: "Initialize Protocol",
+      githubBtn: "GitHub"
     },
     about: {
       title: "System Protocol",
@@ -11,10 +13,11 @@ export const translations = {
       p3: "Credentialed in ISC2 Certified in Cybersecurity (CC) and Microsoft Azure AI Fundamentals (AI-900), with 17 verified Anthropic Academy certifications."
     },
     projects: {
+      tag: "EMPIRICAL BENCHMARKS",
       title: "Deployed Architecture",
       subtitle: "Production architectures, ML pipelines, and security tooling.",
       repoBtn: "View Repository",
-      expandHint: "Click to inspect telemetry",
+      inspectHint: "Click to inspect telemetry",
       items: [
         {
           title: "Endpoint Arbiter",
@@ -95,32 +98,27 @@ export const translations = {
     certs: {
       title: "Credentials and Validation",
       subtitle: "Verified proficiencies, completed pathways, and academic achievements.",
-      modalClose: "CLOSE",
-      viewBtn: "View Credentials",
+      viewBtn: "View Credential",
       groups: [
         {
-          id: "flyrank",
           title: "FlyRank AI Internship (4)",
           desc: "Executive recommendation letter, Backend AI Engineering certificate, AI Fluency, and ML Track completion.",
-          image: "/images/certs/flyrank-certificate-of-completion-backend-ai-engineering.webp"
+          imagePath: "/images/certs/flyrank-certificate-of-completion-backend-ai-engineering.webp"
         },
         {
-          id: "isc2",
           title: "ISC2 Cybersecurity (6)",
           desc: "Official CC credential (#4079917) and 5 domain competencies in access control, network defense, and operations.",
-          image: "/images/certs/CC_cert_isc2.webp"
+          imagePath: "/images/certs/CC_cert_isc2.webp"
         },
         {
-          id: "anthropic",
           title: "Anthropic Academy (17)",
           desc: "Verified certifications covering Claude ecosystems, MCP architecture, agent skills, and AI Fluency frameworks.",
-          image: "/images/certs/Heitor_Quental_Claude_101_certificate.png"
+          imagePath: "/images/certs/Heitor_Quental_Claude_101_certificate.png"
         },
         {
-          id: "senac",
           title: "Senac Qualifications (2)",
-          desc: "Fullstack web development and logic programming certifications from Senac Pernambuco.",
-          image: "/images/certs/Fullstack_senac.png"
+          desc: "Fullstack web development and logic programming qualifications from Senac Pernambuco.",
+          imagePath: "/images/certs/Fullstack_senac.png"
         }
       ]
     },
@@ -143,20 +141,23 @@ export const translations = {
   },
   pt: {
     hero: {
+      eyebrow: "Engenharia de IA & Arquitetura de Cibersegurança",
       subtitle: "Engenharia de pipelines de IA, sistemas de ML e arquiteturas backend seguras.",
-      cta: "Inicializar Protocolo"
+      cta: "Inicializar Protocolo",
+      githubBtn: "GitHub"
     },
     about: {
       title: "Protocolo do Sistema",
-      p1: "Estudante de Sistemas de Informacao na UFRPE (3. periodo, Media Geral 9,10/10, top 3,19% do curso). Meu foco profissional concentra-se na convergencia entre Engenharia de Machine Learning, IA aplicada e seguranca da informacao construindo arquiteturas auditaveis e seguras sustentadas por benchmarks empiricos.",
+      p1: "Estudante de Sistemas de Informacao na UFRPE (3. periodo, Media Geral 9,10/10, top 3,19% do curso). Meu foco profissional concentra-se na convergencia entre Engenharia de Machine Learning, IA aplicada e seguranca da informacao, construindo arquiteturas auditaveis e seguras sustentadas por benchmarks empiricos.",
       p2: "Experiencia pratica em pipelines de ML ponta a ponta e sistemas backend com Python, FastAPI, Pydantic v2, DuckDB, Scikit-Learn, PyTorch, Docker, PostgreSQL, React e Vite, atuando diariamente em ambientes Linux Mint e Kali Linux.",
       p3: "Certificado pelo ISC2 em Certified in Cybersecurity (CC) e Microsoft Azure AI Fundamentals (AI-900), com 17 cursos verificados na Anthropic Academy."
     },
     projects: {
+      tag: "BENCHMARKS EMPIRICOS",
       title: "Arquiteturas Implementadas",
       subtitle: "Projetos em producao, pipelines de ML e solucoes defensivas.",
       repoBtn: "Ver Repositorio",
-      expandHint: "Clique para inspecionar a telemetria",
+      inspectHint: "Clique para inspecionar a telemetria",
       items: [
         {
           title: "Endpoint Arbiter",
@@ -237,32 +238,27 @@ export const translations = {
     certs: {
       title: "Credenciais e Validacao",
       subtitle: "Proficiencias comprovadas, formacoes concluidas e conquistas academicas.",
-      modalClose: "FECHAR",
-      viewBtn: "Ver Credenciais",
+      viewBtn: "Ver Credencial",
       groups: [
         {
-          id: "flyrank",
           title: "Estagio FlyRank AI (4)",
           desc: "Carta executiva de recomendacao, certificado Backend AI Engineering, AI Fluency e conclusao da trilha de Machine Learning.",
-          image: "/images/certs/flyrank-certificate-of-completion-backend-ai-engineering.webp"
+          imagePath: "/images/certs/flyrank-certificate-of-completion-backend-ai-engineering.webp"
         },
         {
-          id: "isc2",
           title: "Certificacao ISC2 CC (6)",
           desc: "Credencial oficial CC (#4079917) e 5 certificados de competencia em controle de acesso, redes e operacoes.",
-          image: "/images/certs/CC_cert_isc2.webp"
+          imagePath: "/images/certs/CC_cert_isc2.webp"
         },
         {
-          id: "anthropic",
           title: "Colecao Anthropic (17)",
           desc: "17 certificacoes cobrindo o ecossistema Claude, integracao MCP, agent skills e fluencia em IA.",
-          image: "/images/certs/Heitor_Quental_Claude_101_certificate.png"
+          imagePath: "/images/certs/Heitor_Quental_Claude_101_certificate.png"
         },
         {
-          id: "senac",
           title: "Qualificacoes Senac (2)",
           desc: "Formacoes profissionais em desenvolvimento fullstack e logica de programacao no Senac Pernambuco.",
-          image: "/images/certs/Fullstack_senac.png"
+          imagePath: "/images/certs/Fullstack_senac.png"
         }
       ]
     },
@@ -273,7 +269,7 @@ export const translations = {
       emailPlaceholder: "Endereco de Retorno / Email",
       messagePlaceholder: "Payload / Mensagem",
       submitBtn: "Transmitir Payload",
-      submittingBtn: "Transmitindo...",
+      submittingBtn: "Transmitting...",
       successTitle: "Payload Entregue.",
       successDesc: "Sua transmissao foi recebida. Entrarei em contato em breve.",
       error: "Falha na transmissao. Verifique sua conexao e tente novamente."
